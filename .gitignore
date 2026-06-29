@@ -1,0 +1,7 @@
+.agent/
+.ralphy/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bz2
+*.dll
