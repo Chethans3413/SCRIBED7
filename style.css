@@ -3912,10 +3912,10 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   }
 
   /* Typography Scaling */
-  h1, .hero-title { font-size: clamp(40px, 8vw, 80px) !important; line-height: 1.1 !important; }
+  h1, .hero-title, .headline { font-size: clamp(40px, 8vw, 80px) !important; line-height: 1.1 !important; }
   h2 { font-size: clamp(30px, 6vw, 60px) !important; }
   h3 { font-size: clamp(24px, 5vw, 40px) !important; }
-  p { font-size: clamp(14px, 3vw, 18px) !important; }
+  p, .sub-text, .desc-text { font-size: clamp(14px, 3vw, 18px) !important; }
 
   /* Hero Section */
   .hero-section {
@@ -3988,11 +3988,21 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     min-width: 100% !important;
   }
 
-  /* Hamburger Menu (Basic CSS toggle) */
+  /* Mobile Navbar */
   .nav-links {
-    display: none !important; /* Hide links on mobile initially */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
   }
-  .mobile-menu-btn {
-    display: block !important;
+  .navbar {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+  .cta-button {
+    margin-top: 15px !important;
   }
 }
