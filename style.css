@@ -4006,3 +4006,106 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     margin-top: 15px !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE LAYOUT EMERGENCY FIXES (Appended)
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+  /* Fix Absolute Positioning Overflows */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 100px 20px 40px !important;
+  }
+  
+  .center-content {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    margin: 40px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Handle absolute cards in Hero */
+  .card {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    margin: 15px auto !important;
+    transform: none !important;
+    max-width: 100% !important;
+  }
+  
+  /* Script Section */
+  .script-headline { font-size: clamp(24px, 6vw, 42px) !important; text-align: center; }
+  .script-subheadline { font-size: clamp(18px, 4vw, 24px) !important; text-align: center; }
+  .seal-icon { margin-top: 30px !important; }
+  
+  /* Services Section */
+  .services-labels {
+    position: relative !important;
+    top: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-bottom: 30px !important;
+  }
+  .service-item {
+    font-size: clamp(35px, 10vw, 80px) !important;
+    white-space: normal !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+  }
+  .services-bg-image {
+    width: 100% !important;
+    height: auto !important;
+    opacity: 0.2 !important; /* Make it subtle so text is readable */
+  }
+
+  /* Work Section - Massive Text Fixes */
+  .work-headline {
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .work-headline .bold-text {
+    font-size: clamp(40px, 13vw, 150px) !important;
+    line-height: 0.9 !important;
+    display: block !important;
+  }
+  .work-headline .italic-text {
+    font-size: clamp(35px, 10vw, 120px) !important;
+    display: block !important;
+    margin-top: 10px !important;
+  }
+  .work-label { justify-content: center !important; width: 100% !important; margin-bottom: 20px !important; }
+  .work-header-left { align-items: center !important; text-align: center !important; }
+  
+  /* Portfolio (Chandi) */
+  .chandi-title { font-size: clamp(30px, 10vw, 60px) !important; text-align: center !important; }
+  .chandi-desc { text-align: center !important; }
+  .chandi-header {
+    flex-direction: column-reverse !important; 
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  /* Force word wrapping on anything that tries to escape */
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
