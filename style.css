@@ -3889,3 +3889,106 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
 [data-reveal-delay="5"] { transition-delay: 0.5s; }
 [data-reveal-delay="6"] { transition-delay: 0.6s; }
 
+
+/* ==========================================================================
+   AGENCY7 RESPONSIVE PATCH
+   ========================================================================== */
+
+/* TABLET & MOBILE (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  /* Global Resets */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Typography Scaling */
+  h1, .hero-title { font-size: clamp(40px, 8vw, 80px) !important; line-height: 1.1 !important; }
+  h2 { font-size: clamp(30px, 6vw, 60px) !important; }
+  h3 { font-size: clamp(24px, 5vw, 40px) !important; }
+  p { font-size: clamp(14px, 3vw, 18px) !important; }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 100px 20px !important;
+    min-height: auto !important;
+  }
+  .hero-content { width: 100% !important; margin: 0 auto !important; }
+
+  /* Grids to 2 Columns */
+  .services-grid, 
+  .web-grid, 
+  .vs-cards, 
+  .chandi-grid, 
+  .grid-2, 
+  .grid-3, 
+  .grid-4 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Specific Adjustments */
+  .web-col-left, .web-col-middle, .web-col-right {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .web-card img, .chandi-card img {
+    object-fit: cover !important;
+  }
+
+  /* Flexbox Layouts */
+  .flex-row, .work-header-row, .vs-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+  
+  .work-header-left, .work-header-right, .vs-header-left {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  /* Footer & Navbar */
+  .footer-container {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+}
+
+/* MOBILE ONLY (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Grids to 1 Column */
+  .services-grid, 
+  .web-grid, 
+  .vs-cards, 
+  .chandi-grid, 
+  .grid-2, 
+  .grid-3, 
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Card Heights */
+  .web-col-left, .web-col-middle, .web-col-right,
+  .service-card, .web-card, .chandi-card {
+    height: 250px !important;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* Hamburger Menu (Basic CSS toggle) */
+  .nav-links {
+    display: none !important; /* Hide links on mobile initially */
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+}
