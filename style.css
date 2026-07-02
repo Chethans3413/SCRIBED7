@@ -4886,3 +4886,97 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 6: SERVICES SECTION SLIDER PERFECT FIX
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Reset everything for slider items */
+  .service-item {
+    width: 100% !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Font scales perfectly for mobile widths */
+  .service-item.pos-0 {
+    font-size: clamp(32px, 9vw, 46px) !important;
+    color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    font-weight: 900 !important;
+    letter-spacing: 0px !important;
+  }
+  .service-item.pos-1 {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    color: #2659ff !important; /* Bright blue */
+    transform: translate(-50%, calc(-50% + 65px)) scale(1) !important;
+    opacity: 1 !important;
+    font-weight: 800 !important;
+  }
+  .service-item.pos-minus-1 {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    color: #2659ff !important;
+    transform: translate(-50%, calc(-50% - 65px)) scale(1) !important;
+    opacity: 1 !important;
+    font-weight: 800 !important;
+  }
+  .service-item.pos-2 {
+    font-size: clamp(14px, 4.5vw, 20px) !important;
+    color: transparent !important;
+    -webkit-text-stroke: 1px #2659ff !important; /* Blue outline */
+    transform: translate(-50%, calc(-50% + 115px)) scale(1) !important;
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+  .service-item.pos-minus-2 {
+    font-size: clamp(14px, 4.5vw, 20px) !important;
+    color: transparent !important;
+    -webkit-text-stroke: 1px #2659ff !important;
+    transform: translate(-50%, calc(-50% - 115px)) scale(1) !important;
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Safe Side Labels Alignment */
+  .services-section {
+    position: relative !important;
+  }
+  .services-labels {
+    position: absolute !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: translateY(-50%) !important;
+    width: 100% !important;
+    height: 520px !important; /* Match dark panel height */
+    padding: 0 10px !important; /* Distance from very edge of screen */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    pointer-events: none !important;
+  }
+  .left-label {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    opacity: 0.8 !important;
+  }
+  .right-label {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    writing-mode: vertical-rl !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    opacity: 0.8 !important;
+  }
+}
