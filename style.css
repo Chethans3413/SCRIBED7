@@ -4254,3 +4254,56 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     color: #002b80 !important; /* Force to dark blue if needed */
   }
 }
+
+/* ==========================================================================
+   PHOTO 1 MOBILE LAYOUT REWRITE (Hero & Stacked Cards)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* HERO LAYOUT */
+  .hero {
+    display: grid !important;
+    grid-template-columns: 60% 40% !important;
+    grid-auto-rows: auto !important;
+    gap: 15px 0 !important;
+    padding: 100px 20px 40px !important;
+    align-items: start !important;
+  }
+  
+  .card, .center-content, .desc-text {
+    position: relative !important;
+    left: auto !important; right: auto !important; top: auto !important;
+    margin: 0 !important; width: 100% !important; transform: none !important;
+  }
+  
+  .center-content { display: contents !important; }
+  
+  .who-we-are { grid-column: 1 / 2; grid-row: 1; align-self: end; margin-bottom: 5px !important; }
+  .headline { grid-column: 1 / 2; grid-row: 2; font-size: clamp(35px, 9vw, 60px) !important; line-height: 1 !important; margin-bottom: 5px !important; }
+  .divider { display: none !important; }
+  
+  /* Sub-text matches the layout "We build digital presence..." */
+  .sub-text {
+    grid-column: 1 / 2; grid-row: 3;
+    margin-top: 15px !important; margin-bottom: 15px !important;
+    font-size: 14px !important; opacity: 0.8 !important; line-height: 1.4 !important; text-transform: none !important;
+  }
+  .explore-link { grid-column: 1 / 2; grid-row: 4; font-size: 12px !important; }
+  
+  /* Bust Image on the Right */
+  .bust-card { grid-column: 2 / 3; grid-row: 1 / 5; align-self: start; margin-top: 40px !important; }
+  .bust-card img { width: 100% !important; height: auto !important; transform: scale(1.1) !important; }
+  
+  /* Hide the loose desc-text */
+  .desc-text { display: none !important; }
+  
+  /* STACKED CARDS BELOW HERO (Right Mockup Pattern) */
+  .leon-card { grid-column: 1 / 3; grid-row: 5; margin-top: 40px !important; width: 100% !important; }
+  .zoe-card { grid-column: 1 / 3; grid-row: 6; margin-top: 20px !important; width: 100% !important; }
+  .news-card { grid-column: 1 / 3; grid-row: 7; margin-top: 20px !important; width: 100% !important; }
+  .starry-card { grid-column: 1 / 3; grid-row: 8; margin-top: 20px !important; width: 100% !important; }
+  
+  /* Ensure images in the stacked cards span fully and look neat */
+  .leon-card img, .zoe-card img, .news-card img, .starry-card img {
+    width: 100% !important; height: auto !important; border-radius: 10px !important; object-fit: cover !important;
+  }
+}
