@@ -4629,3 +4629,71 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     border: none !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 3: SCRIPT SECTION EXACT PATTERN
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. The Angled Cut */
+  .script-section {
+    position: relative;
+    padding: 60px 20px 80px !important;
+    background-color: #fcfcfc !important; /* Slightly lighter off-white to match photo */
+    clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%) !important;
+    margin-top: -10px !important; /* Overlap hero slightly */
+  }
+
+  /* 2. Headline Typography */
+  .script-headline {
+    font-size: clamp(28px, 9vw, 36px) !important;
+    line-height: 1.2 !important;
+    color: #0631b3 !important;
+    max-width: 280px !important;
+    margin: 0 auto 20px !important;
+    letter-spacing: -0.5px !important;
+  }
+
+  /* 3. The New Divider */
+  .script-divider {
+    display: block !important;
+    width: 140px !important;
+    height: 1px !important;
+    background-color: rgba(6, 49, 179, 0.2) !important;
+    margin: 30px auto !important;
+    position: relative !important;
+  }
+  .script-divider::after {
+    content: '✦'; /* Diamond star */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fcfcfc; /* Match section background */
+    padding: 0 12px;
+    color: #0631b3;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* 4. Sub-headline Typography */
+  .script-subheadline {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    line-height: 1.2 !important;
+    color: #0631b3 !important;
+    margin-bottom: 60px !important;
+    max-width: 280px !important;
+    margin: 0 auto 60px !important;
+  }
+  
+  /* 5. Badge */
+  .seal-icon {
+    width: 100px !important;
+    height: 100px !important;
+    color: #0631b3 !important;
+    margin-top: 40px !important;
+  }
+  .seal-svg text {
+    letter-spacing: 2px !important;
+    font-weight: 500 !important;
+  }
+}
