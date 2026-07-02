@@ -5148,3 +5148,258 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     height: 520px !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 9: "OUR WORK" & CHANDI MOBILE PATTERN
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* --- 1. OUR WORK SECTION --- */
+  .work-section {
+    padding: 40px 20px !important;
+    background-color: #fbf8f1 !important; /* Cream background */
+  }
+  .blue-line {
+    border: none !important;
+    border-top: 1px solid rgba(2, 24, 91, 0.2) !important;
+    margin-bottom: 40px !important;
+  }
+  .work-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 30px !important;
+  }
+  .work-left {
+    width: 100% !important;
+  }
+  .work-label {
+    font-size: 11px !important;
+    color: #02185b !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .work-headline {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0px !important;
+  }
+  .work-headline .bold-text {
+    font-size: 42px !important;
+    color: #02185b !important;
+    font-weight: 900 !important;
+    line-height: 0.9 !important;
+    text-transform: uppercase !important;
+  }
+  .work-headline .italic-text {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-size: 40px !important;
+    color: #02185b !important;
+    line-height: 1 !important;
+    margin-top: -5px !important;
+  }
+
+  .work-right {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Left aligned! */
+    gap: 20px !important;
+  }
+  .work-desc {
+    font-size: 13px !important;
+    color: #02185b !important;
+    font-weight: 600 !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+    text-transform: none !important; /* Sentence case! */
+    max-width: 90% !important;
+  }
+  .work-nav-icons {
+    align-self: flex-end !important; /* Float to right */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 10px !important;
+  }
+  .circle-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    border: 1px solid #02185b !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #02185b !important;
+    font-size: 18px !important;
+  }
+  .nav-dots {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .nav-dots .dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+  }
+  .nav-dots .blue-dot { background-color: #2659ff !important; }
+  .nav-dots .grey-dot { background-color: #d1d5df !important; }
+
+  /* --- 2. CHANDI TOP HEADER --- */
+  .chandi-section {
+    padding: 0 20px 60px !important;
+    background-color: #fbf8f1 !important;
+  }
+  .chandi-top {
+    display: flex !important;
+    flex-direction: row !important; /* Side by side on mobile! */
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+  }
+  .chandi-title {
+    font-size: 32px !important;
+    color: #02185b !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+  }
+  .chandi-top-right {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex: 1 !important;
+  }
+  .chandi-subtitle {
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    font-size: 16px !important;
+    color: #02185b !important;
+    margin-bottom: 5px !important;
+    font-weight: 500 !important;
+  }
+  .chandi-desc {
+    font-size: 6px !important;
+    color: #02185b !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* --- 3. MASONRY GRID --- */
+  .chandi-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 30px !important;
+  }
+  .chandi-item {
+    position: relative !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  .chandi-item img, .chandi-item video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+  .chandi-pill {
+    position: absolute !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    font-size: 8px !important;
+    font-weight: 800 !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    letter-spacing: 1px !important;
+  }
+  .chandi-hero-text {
+    position: absolute !important;
+    color: #fff !important;
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    bottom: 15px !important;
+    left: 15px !important;
+  }
+  
+  /* Grid specifics */
+  .chandi-top-full {
+    height: 180px !important;
+    width: 100% !important;
+  }
+  .chandi-top-full .chandi-pill { bottom: 50px !important; left: 15px !important; }
+  
+  .chandi-bottom-split {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    height: 240px !important;
+  }
+  .chandi-bottom-left {
+    flex: 1 !important;
+    height: 100% !important;
+  }
+  .chandi-bottom-left .chandi-pill { bottom: 50px !important; left: 15px !important; }
+  
+  .chandi-bottom-right {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    height: 100% !important;
+  }
+  .sq-top, .sq-bottom {
+    flex: 1 !important;
+    width: 100% !important;
+  }
+  .sq-top .chandi-pill { bottom: 10px !important; left: 10px !important; }
+  .sq-bottom .chandi-pill { bottom: 10px !important; left: 10px !important; }
+
+  /* --- 4. CTA BANNER --- */
+  .chandi-cta-banner {
+    background-color: #02185b !important;
+    border-radius: 12px !important;
+    padding: 25px 20px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .cta-left {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+  }
+  .cta-left .star-icon {
+    color: #fff !important;
+    font-size: 16px !important;
+    margin-top: 2px !important;
+  }
+  .cta-left p {
+    color: #fff !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+  }
+  .cta-right .circle-btn {
+    border-color: #fff !important;
+    color: #fff !important;
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+}
