@@ -4581,3 +4581,51 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     transform: translateX(-35px) !important; /* Move the bust further to the left */
   }
 }
+
+/* ==========================================================================
+   FUNCTIONAL MOBILE MENU
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .navbar { position: relative !important; z-index: 9999 !important; }
+  
+  /* When Active */
+  .navbar.mobile-active .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 70px !important; /* height of navbar approx */
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #0631b3 !important;
+    padding: 80px 40px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 40px !important;
+    z-index: 9998 !important;
+  }
+  .navbar.mobile-active .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar.mobile-active .nav-links li a {
+    font-size: 28px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    display: block;
+    font-weight: 300 !important;
+    letter-spacing: 2px;
+  }
+  
+  .navbar.mobile-active .cta-button {
+    display: inline-flex !important;
+    position: fixed !important;
+    bottom: 80px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999 !important;
+    background: #fff !important;
+    color: #0631b3 !important;
+    border: none !important;
+  }
+}

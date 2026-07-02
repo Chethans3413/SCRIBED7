@@ -218,3 +218,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+// ---- Mobile Menu Toggle ----
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navbarMobile = document.querySelector('.navbar');
+  const navLinksMobile = document.querySelectorAll('.nav-links a, .cta-button');
+
+  if (hamburger && navbarMobile) {
+    hamburger.addEventListener('click', () => {
+      navbarMobile.classList.toggle('mobile-active');
+      if (navbarMobile.classList.contains('mobile-active')) {
+        hamburger.textContent = '✕';
+      } else {
+        hamburger.textContent = '☰';
+      }
+    });
+
+    navLinksMobile.forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMobile.classList.remove('mobile-active');
+        hamburger.textContent = '☰';
+      });
+    });
+  }
+});
