@@ -5758,3 +5758,36 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     line-height: 0.85 !important; /* Match exact gap between BRINGING and BRAND */
   }
 }
+
+/* ==========================================================================
+   PHOTO 15: UPPER TEXT FLUSH LEFT ALIGNMENT
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* Kill the desktop left padding that was pushing the headline inwards */
+  .work-left {
+    padding-left: 0 !important;
+  }
+  
+  /* Tighten the gap between "OUR WORK" label and "BRINGING BRAND" headline */
+  .work-label {
+    margin-bottom: 15px !important;
+    padding-left: 0 !important;
+  }
+  
+  /* Kill the slight indent on the cursive text from desktop */
+  .work-headline .italic-text {
+    padding-left: 0 !important;
+  }
+  
+  /* Ensure the headline aligns perfectly with the paragraph edge */
+  .work-headline {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Slightly tighten the gap below the paragraph to match mockup flow */
+  .work-desc {
+    margin-bottom: 25px !important;
+  }
+}
