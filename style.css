@@ -4397,3 +4397,112 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     margin-right: auto !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 2 EXACT PATTERN REWRITE (Staggered Masonry)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Logo adjustments */
+  .logo-text { 
+    text-transform: lowercase !important; 
+    font-family: 'Cormorant Garamond', serif !important; 
+    font-size: 28px !important; 
+    font-weight: 500 !important; 
+    letter-spacing: 0 !important; 
+  }
+
+  /* Hide unused cards */
+  .leon-card, .zoe-card { display: none !important; }
+  
+  /* Reset defaults */
+  .card, .center-content, .desc-text {
+    position: relative !important; 
+    left: auto !important; right: auto !important; top: auto !important;
+    margin: 0 !important; width: 100% !important; transform: none !important;
+    height: auto !important; overflow: visible !important;
+  }
+  .center-content { display: contents !important; }
+  
+  /* --- THE NEW MASONRY GRID --- */
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: min-content !important; 
+    gap: 15px 20px !important;
+    padding: 60px 20px 80px !important;
+    align-items: start !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* --- TOP LEFT: BUST --- */
+  .bust-card { 
+    grid-column: 1 / 2; grid-row: 1 / 5; 
+    display: flex !important; justify-content: flex-start !important; align-items: flex-start !important;
+  }
+  .bust-card img { 
+    width: 140% !important; height: auto !important; 
+    transform: translateX(-15px) !important; /* Shift it slightly left */
+    object-fit: contain !important;
+  }
+  
+  /* --- TOP RIGHT: TEXT BLOCK --- */
+  .who-we-are { 
+    grid-column: 2 / 3; grid-row: 1; 
+    align-self: end; margin-bottom: 0 !important; justify-content: flex-start !important;
+  }
+  .headline { 
+    grid-column: 2 / 3; grid-row: 2; 
+    font-size: clamp(32px, 10vw, 50px) !important; line-height: 1 !important; 
+    text-align: left !important;
+  }
+  .divider { 
+    grid-column: 2 / 3; grid-row: 3; 
+    display: block !important; margin: 15px 0 !important; 
+    border-top: 1px solid rgba(255,255,255,0.2) !important; 
+    width: 100%; position: relative !important; 
+  }
+  .divider::after { 
+    content: '✦'; position: absolute; left: 50%; top: -10px; transform: translateX(-50%); 
+    font-size: 14px; color: #fff; background: #0631b3; padding: 0 10px; 
+  }
+  .desc-text { 
+    grid-column: 2 / 3; grid-row: 4; 
+    display: block !important; font-size: 13px !important; line-height: 1.5 !important; 
+    opacity: 0.9; text-align: left !important; margin-top: 5px !important;
+  }
+  
+  /* --- MIDDLE: STAGGERED CARDS --- */
+  .news-card { 
+    grid-column: 1 / 2; grid-row: 5; 
+    margin-top: 30px !important; width: 100% !important; 
+  }
+  .starry-card { 
+    grid-column: 2 / 3; grid-row: 5 / 7; 
+    align-self: center; margin-top: 80px !important; width: 100% !important; 
+  }
+  .news-card img, .starry-card img { 
+    width: 100% !important; height: auto !important; 
+    border-radius: 8px !important; object-fit: contain !important; 
+  }
+  
+  /* --- BOTTOM LEFT: SUB-TEXT --- */
+  .sub-text {
+    grid-column: 1 / 2; grid-row: 6;
+    font-size: 10px !important; opacity: 0.9 !important; line-height: 1.6 !important; 
+    text-align: left !important; max-width: 100% !important;
+    border-top: 1px solid rgba(255,255,255,0.3) !important;
+    padding-top: 15px !important; margin-top: 20px !important;
+    position: relative !important; text-transform: uppercase !important;
+  }
+  .sub-text::before {
+    content: '✦'; position: absolute; left: 0; top: -10px; 
+    background: #0631b3; padding-right: 10px; color: #fff; font-size: 14px;
+  }
+  .explore-link { 
+    grid-column: 1 / 2; grid-row: 7; 
+    text-align: left !important; display: inline-block !important; 
+    font-size: 11px !important; margin-top: 15px !important; 
+    border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; width: max-content; 
+  }
+}
