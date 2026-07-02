@@ -5085,3 +5085,66 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     margin: 0 !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 8: SERVICES SLIDER SMOOTH ANIMATION & SPACING
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* 
+     PERFORMANCE FIX: 
+     Do not animate font-size. It forces layout reflows and causes severe lag on phones.
+     Instead, set a single base font-size and use GPU-accelerated transform: scale() 
+  */
+  .service-item {
+    font-size: clamp(32px, 8.5vw, 44px) !important; /* Base size */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease, color 0.4s ease !important;
+    will-change: transform, opacity !important; /* Hint to browser to GPU accelerate */
+  }
+
+  /* Center Item (100% scale) */
+  .service-item.pos-0 {
+    color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    font-weight: 900 !important;
+    opacity: 1 !important;
+  }
+
+  /* Adjacent Items (65% scale, tighter gap) */
+  .service-item.pos-1 {
+    color: #2659ff !important; 
+    transform: translate(-50%, calc(-50% + 46px)) scale(0.65) !important; /* Reduced from 65px */
+    opacity: 1 !important;
+    font-weight: 800 !important;
+    -webkit-text-stroke: 0px transparent !important;
+  }
+  .service-item.pos-minus-1 {
+    color: #2659ff !important;
+    transform: translate(-50%, calc(-50% - 46px)) scale(0.65) !important; /* Reduced from 65px */
+    opacity: 1 !important;
+    font-weight: 800 !important;
+    -webkit-text-stroke: 0px transparent !important;
+  }
+
+  /* Outer Items (45% scale, tighter gap) */
+  .service-item.pos-2 {
+    color: transparent !important;
+    -webkit-text-stroke: 1px #2659ff !important;
+    transform: translate(-50%, calc(-50% + 82px)) scale(0.45) !important; /* Reduced from 115px */
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+  .service-item.pos-minus-2 {
+    color: transparent !important;
+    -webkit-text-stroke: 1px #2659ff !important;
+    transform: translate(-50%, calc(-50% - 82px)) scale(0.45) !important; /* Reduced from 115px */
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Fix side label positioning inside the new padding */
+  .services-labels {
+    height: 520px !important;
+  }
+}
