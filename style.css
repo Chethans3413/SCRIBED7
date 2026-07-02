@@ -4222,3 +4222,35 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   .chandi-item.wide { grid-column: 1 / 2 !important; grid-row: 2 !important; height: 180px !important; }
   .chandi-item.square { grid-column: 2 / 3 !important; grid-row: 2 !important; height: 180px !important; }
 }
+
+/* ==========================================================================
+   SPECIFICITY BULLETPROOFING & CACHE BUST
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .service-item,
+  .service-item.pos-0,
+  .service-item.pos-1,
+  .service-item.pos-2,
+  .service-item.pos-3,
+  .service-item.pos-4 {
+    font-size: clamp(35px, 9vw, 80px) !important;
+    white-space: normal !important;
+    position: relative !important;
+  }
+  
+  .work-headline .bold-text {
+    font-size: clamp(35px, 11vw, 110px) !important;
+    line-height: 1 !important;
+    display: block !important;
+  }
+  
+  .work-headline .italic-text {
+    font-size: clamp(30px, 9vw, 100px) !important;
+    display: block !important;
+  }
+  
+  /* Hard reset for Script text */
+  .script-headline {
+    color: #002b80 !important; /* Force to dark blue if needed */
+  }
+}
