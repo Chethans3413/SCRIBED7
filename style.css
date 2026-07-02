@@ -5791,3 +5791,16 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     margin-bottom: 25px !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 16: MASSIVE HEADLINE FONTS TO FILL WHITE SPACE
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .work-headline .bold-text {
+    font-size: clamp(55px, 16vw, 85px) !important; /* MASSIVE FONT to fill width */
+    letter-spacing: -1px !important;
+  }
+  .work-headline .italic-text {
+    font-size: clamp(50px, 14vw, 70px) !important; /* MASSIVE FONT to cover white space */
+  }
+}
