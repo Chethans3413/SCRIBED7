@@ -5629,3 +5629,93 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     max-width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 13: NUCLEAR REWRITE FOR ALIGNMENT AND WIDTH
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* --- WORK SECTION --- */
+  .work-section {
+    padding: 40px 20px !important; /* 20px padding on left and right */
+  }
+  .work-content {
+    display: block !important; /* Kill flexbox that might shrink it */
+    width: 100% !important;
+  }
+  .work-left {
+    display: block !important;
+    width: 100% !important;
+  }
+  .work-headline {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Force Arrow to the far right edge! */
+  .headline-bottom-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important; /* Take full width of the padded screen */
+    margin-top: -15px !important;
+  }
+  
+  .work-right {
+    display: block !important;
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+  .work-desc {
+    display: block !important;
+    width: 100% !important; /* Force paragraph to take full width */
+    max-width: 100% !important;
+    text-align: justify !important; /* Justify text to eliminate all right-side white space! */
+    font-size: 14px !important;
+    margin-top: 20px !important;
+  }
+
+  /* --- CHANDI SECTION --- */
+  /* Force exact percentage split so neither side can crush the other */
+  .chandi-top {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 0 !important; /* Control exact spacing via percentages */
+    margin-bottom: 25px !important;
+  }
+  .chandi-title {
+    width: 45% !important;
+    flex: 0 0 45% !important;
+    font-size: 34px !important; /* Fixed safe size */
+    margin: 0 !important;
+    line-height: 0.8 !important;
+    word-break: break-word !important;
+  }
+  .chandi-top-right {
+    width: 55% !important;
+    flex: 0 0 55% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+  .chandi-subtitle {
+    font-size: 16px !important;
+    line-height: 1.1 !important;
+    margin-bottom: 6px !important;
+    white-space: nowrap !important; /* Now safe because it has exactly 55% of screen width */
+    text-align: right !important;
+  }
+  .chandi-desc {
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    text-align: right !important; /* Or justify if they want no white space here too */
+    text-align-last: right !important;
+    width: 100% !important;
+  }
+}
