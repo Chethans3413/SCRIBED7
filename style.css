@@ -4331,3 +4331,69 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     object-fit: contain !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 1 FINE TUNING (Navbar, Proportions, Alignment)
+   ========================================================================== */
+
+/* Hamburger menu default hidden on desktop */
+.hamburger { display: none; }
+
+@media screen and (max-width: 768px) {
+  /* 1. Navbar cleanup */
+  .nav-links, .cta-button { display: none !important; }
+  .hamburger { 
+    display: block !important; 
+    font-size: 28px !important; 
+    color: #fff !important; 
+    cursor: pointer !important; 
+  }
+  .navbar { 
+    justify-content: space-between !important; 
+    padding: 20px 25px !important; 
+  }
+  
+  /* 2. Hero Text alignment and compact size */
+  .who-we-are { 
+    justify-content: flex-start !important; 
+    text-align: left !important; 
+    margin-bottom: 10px !important;
+  }
+  .headline { 
+    text-align: left !important; 
+    font-size: clamp(30px, 9vw, 50px) !important; 
+  }
+  .sub-text {
+    text-align: left !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+    padding-right: 10px !important; /* prevent bumping into bust */
+    margin-top: 10px !important;
+  }
+  .explore-link {
+    text-align: left !important;
+    display: block !important;
+  }
+  
+  /* 3. Bust Scaling */
+  .bust-card {
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-end !important;
+    margin-top: 10px !important;
+  }
+  .bust-card img {
+    width: 140% !important; /* Make it significantly larger */
+    height: auto !important;
+    transform: translateX(10px) translateY(20px) !important;
+    object-fit: contain !important;
+  }
+  
+  /* 4. Inset cards */
+  .leon-card, .zoe-card, .news-card, .starry-card {
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
