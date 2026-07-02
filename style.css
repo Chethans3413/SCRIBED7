@@ -4307,3 +4307,27 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     width: 100% !important; height: auto !important; border-radius: 10px !important; object-fit: cover !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 1 LAYOUT HEIGHT FIXES
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* Fix giant gaps by removing fixed heights on the Hero */
+  .hero {
+    height: auto !important;
+    min-height: auto !important;
+    padding-bottom: 60px !important;
+  }
+  
+  /* Fix hidden images by removing hardcoded heights on the cards */
+  .card, .leon-card, .zoe-card, .news-card, .starry-card {
+    height: auto !important;
+    min-height: 200px !important; /* give them some room to breathe */
+    overflow: visible !important;
+  }
+  
+  .card img {
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
