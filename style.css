@@ -5546,3 +5546,86 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     max-width: 100% !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 12: OUR WORK STRUCTURAL PERFECTION (FINAL)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Headline & Arrow Layout (Bulletproof Flexbox) */
+  .work-left {
+    width: 100% !important;
+  }
+  .work-headline {
+    width: 100% !important;
+  }
+  .headline-bottom-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin-top: -15px !important; /* Tuck tightly under BRAND */
+  }
+  .work-headline .italic-text {
+    margin-top: 0 !important;
+  }
+  
+  /* Reset nav icons from previous absolute positioning patches */
+  .work-nav-icons {
+    position: static !important;
+    transform: none !important;
+    margin-top: 0 !important;
+    padding-bottom: 5px !important;
+  }
+
+  /* 2. Paragraph Text Flow */
+  .work-right {
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+  }
+  .work-desc {
+    max-width: 100% !important;
+    text-align: left !important;
+    margin: 5px 0 0 0 !important; /* Tiny gap under lore to life */
+  }
+
+  /* 3. CHANDI Safe Layout (No Overflow) */
+  .chandi-top {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+  }
+  .chandi-title {
+    font-size: clamp(30px, 9vw, 42px) !important; 
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    line-height: 0.8 !important;
+  }
+  .chandi-top-right {
+    flex-shrink: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+    margin-bottom: -3px !important; /* Align baselines */
+  }
+  .chandi-subtitle {
+    font-size: clamp(15px, 4.5vw, 20px) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 5px !important;
+    text-align: right !important;
+    white-space: normal !important; /* Never push off screen */
+  }
+  .chandi-desc {
+    font-size: clamp(8px, 2.5vw, 10px) !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    text-align: right !important;
+    max-width: 100% !important;
+  }
+}
