@@ -4740,3 +4740,149 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     letter-spacing: 5px !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 5: SERVICES SECTION MOBILE SLIDER (Exact Pattern)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Main container */
+  .services-section {
+    padding: 40px 0 60px !important; 
+    min-height: auto !important; 
+  }
+  .services-top {
+    margin-bottom: 40px !important;
+    justify-content: center !important;
+  }
+
+  /* 2. The Dark Panel */
+  .services-center {
+    width: 82% !important; /* Leaves room for side labels */
+    height: 520px !important;
+    margin: 0 auto 40px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important; 
+    position: relative !important;
+    background-color: #031346 !important; /* Very dark moody blue */
+  }
+  .services-bg-image {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important; 
+    z-index: 0 !important;
+    opacity: 0.65 !important;
+    mix-blend-mode: hard-light !important; /* Better contrast for dark image */
+  }
+  .services-bg-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* 3. The Side Labels */
+  .services-labels {
+    position: absolute !important;
+    top: 55% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 0 !important; 
+    padding: 0 !important;
+    opacity: 1 !important;
+    z-index: 2 !important;
+  }
+  .left-label {
+    position: absolute !important;
+    left: 8px !important;
+    top: -80px !important; 
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    color: #fff !important;
+    font-size: 11px !important;
+  }
+  .right-label {
+    position: absolute !important;
+    right: 8px !important;
+    top: -80px !important;
+    writing-mode: vertical-rl !important;
+    color: #fff !important;
+    font-size: 11px !important;
+  }
+
+  /* 4. The Vertical Slider Items */
+  .slider-wrapper {
+    height: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .service-item.pos-0 {
+    font-size: 52px !important;
+    color: #ffffff !important;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    font-weight: 900 !important;
+    letter-spacing: -1px !important;
+  }
+  .service-item.pos-1 {
+    font-size: 28px !important;
+    color: #2659ff !important; /* Bright blue */
+    transform: translate(-50%, calc(-50% + 75px)) scale(1) !important;
+    opacity: 1 !important;
+    font-weight: 800 !important;
+  }
+  .service-item.pos-minus-1 {
+    font-size: 28px !important;
+    color: #2659ff !important;
+    transform: translate(-50%, calc(-50% - 75px)) scale(1) !important;
+    opacity: 1 !important;
+    font-weight: 800 !important;
+  }
+  .service-item.pos-2 {
+    font-size: 20px !important;
+    color: transparent !important;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.4) !important;
+    transform: translate(-50%, calc(-50% + 130px)) scale(1) !important;
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+  .service-item.pos-minus-2 {
+    font-size: 20px !important;
+    color: transparent !important;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.4) !important;
+    transform: translate(-50%, calc(-50% - 130px)) scale(1) !important;
+    opacity: 0.8 !important;
+    font-weight: 700 !important;
+  }
+
+  /* 5. Slider Dots */
+  .slider-dots {
+    position: absolute !important;
+    bottom: 25px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    gap: 8px !important;
+    z-index: 3 !important;
+  }
+  .slider-dots .dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+  }
+  .slider-dots .dot.active {
+    background-color: #2659ff !important; 
+  }
+
+  /* 6. Footer Text */
+  .services-bottom-text {
+    text-align: center !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+  }
+}
