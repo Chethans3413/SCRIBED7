@@ -5403,3 +5403,69 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     flex-shrink: 0 !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 10: "OUR WORK" & CHANDI REFINEMENT
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  
+  /* 1. Tighter Headline Stack */
+  .work-content {
+    gap: 15px !important; /* Bring paragraph closer to headline */
+  }
+  .work-headline .bold-text {
+    line-height: 0.8 !important; /* Squeeze BRINGING and BRAND closer */
+  }
+  .work-headline .italic-text {
+    margin-top: -12px !important; /* Tuck 'lore to life' tightly under BRAND */
+    z-index: 2 !important;
+    position: relative !important;
+  }
+
+  /* 2. Arrow & Dots Navigation floating right */
+  .work-right {
+    position: relative !important;
+    padding-right: 65px !important; /* Leave room for nav column */
+    display: block !important; /* Remove flex column */
+  }
+  .work-desc {
+    margin: 0 !important;
+    max-width: 100% !important; /* Fill available padded space */
+  }
+  .work-nav-icons {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-top: 0 !important;
+  }
+
+  /* 3. CHANDI Split Layout */
+  .chandi-top {
+    align-items: flex-end !important;
+    gap: 10px !important;
+  }
+  .chandi-title {
+    font-size: 38px !important;
+    flex: 0 0 auto !important; /* Prevent shrinking */
+    letter-spacing: -1px !important;
+  }
+  .chandi-top-right {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important; /* Force right alignment */
+    text-align: right !important; /* Force right alignment */
+  }
+  .chandi-subtitle {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+    white-space: nowrap !important; /* Prevent 'an experience' from wrapping wildly */
+  }
+  .chandi-desc {
+    font-size: 8.5px !important; /* Make it readable */
+    line-height: 1.5 !important;
+    text-align: right !important;
+    max-width: 180px !important; /* Give it enough width to format nicely */
+  }
+}
