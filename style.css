@@ -4506,3 +4506,36 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; width: max-content; 
   }
 }
+
+/* ==========================================================================
+   PHOTO 2 BUG FIXES (Navbar & Text Overflow)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Fix Navbar stacking (override flex-direction: column) */
+  .navbar {
+    flex-direction: row !important; /* Force items side-by-side */
+    align-items: center !important;
+  }
+  
+  /* 2. Fix Grid overflow causing chopped content */
+  .hero {
+    grid-template-columns: minmax(0, 45%) minmax(0, 55%) !important; /* Allow the text column to be slightly wider */
+    gap: 15px 10px !important; /* Reduce horizontal gap to give more room */
+    padding-left: 15px !important; 
+    padding-right: 15px !important;
+  }
+  
+  /* Prevent any grid item from breaking the grid width */
+  .bust-card, .who-we-are, .headline, .divider, .desc-text, .news-card, .starry-card, .sub-text, .explore-link {
+    min-width: 0 !important; 
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* 3. Fix Headline size to prevent "CREDIBILITY" from bleeding off the edge */
+  .headline {
+    font-size: clamp(22px, 7.5vw, 40px) !important; 
+    word-break: break-word !important;
+    hyphens: auto !important;
+  }
+}
