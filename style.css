@@ -4572,3 +4572,12 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     filter: none !important;
   }
 }
+
+/* ==========================================================================
+   PHOTO 2 BUST NUDGE
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .bust-card img {
+    transform: translateX(-35px) !important; /* Move the bust further to the left */
+  }
+}
