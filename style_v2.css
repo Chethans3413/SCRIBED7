@@ -2919,10 +2919,11 @@ body {
   }
 
   .unanswered-heading {
-    font-size: clamp(65px, 20vw, 85px);
+    font-size: clamp(80px, 28vw, 115px);
     letter-spacing: -2px;
     text-align: center;
     line-height: 0.85;
+    white-space: nowrap;
   }
 
   /* Composite image: perfectly mimics PC proportion to the text */
