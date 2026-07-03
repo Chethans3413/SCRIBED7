@@ -3,296 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agency7 — How We Hacked Footfall &amp; Drove a 200% Sales Surge</title>
-  <meta name="description" content="How Agency7 turned a hospital event into a viral cultural moment, driving 200% sales growth for Lakshmi Eye Hospital." />
+  <title>Agency7 — Lakshmi Eye Hospital Case Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    /* ── RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body {
+    html, body {
       font-family: 'Inter', sans-serif;
-      background: #edf1fb;
-      color: #111;
-      overflow-x: hidden;
+      background: #eef2fb;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
+    img { display: block; max-width: 100%; height: auto; }
     a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    img { display: block; width: 100%; }
 
-    /* ── TOKENS ── */
-    :root {
-      --blue:   #0631b3;
-      --deep:   #02185b;
-      --accent: #3d6af5;
-      --pale:   #f0f4fb;
-      --white:  #ffffff;
-    }
-
-    /* ════════════════════════════
-       NAVBAR
-    ════════════════════════════ */
+    /* ─── NAVBAR ─── */
     .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 999;
-      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 14px 20px;
-      border-bottom: 1px solid rgba(0,0,0,0.07);
+      border-bottom: 1px solid #e5e7eb;
     }
-    .nav-brand {
+    .nav-logo {
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 8px;
       font-size: 16px;
       font-weight: 700;
-      color: var(--deep);
-      letter-spacing: 0.3px;
+      color: #02185b;
     }
-    .nav-brand .star {
-      color: var(--accent);
-      font-size: 17px;
-      line-height: 1;
+    /* Zigzag / Agency7 logo icon */
+    .nav-logo svg {
+      width: 22px;
+      height: 22px;
+      fill: #3d6af5;
     }
-    .nav-burger {
-      font-size: 20px;
-      color: var(--deep);
-      cursor: pointer;
-      line-height: 1;
-      padding: 4px;
-    }
+    .nav-menu { font-size: 20px; color: #02185b; cursor: pointer; }
 
-    /* ════════════════════════════
-       HERO — Dark blue panel
-    ════════════════════════════ */
+    /* ─── HERO (dark blue) ─── */
     .hero {
-      background: var(--blue);
-      color: var(--white);
-      padding: 88px 22px 48px;
+      background: #0631b3;
+      padding: 36px 22px 44px;
     }
 
-    /* Big headline */
-    .hero-h1 {
-      font-size: clamp(32px, 8.5vw, 68px);
+    /* Headline — big bold white */
+    .hero h1 {
+      font-size: 38px;
       font-weight: 900;
-      line-height: 1.04;
+      line-height: 1.05;
       text-transform: uppercase;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      letter-spacing: -1px;
+      color: #fff;
+      margin-bottom: 18px;
     }
-    .hero-h1 .outline {
+    /* "200% SALES" outline effect */
+    .hero h1 .outline {
       display: block;
       color: transparent;
-      -webkit-text-stroke: 2px var(--white);
-      font-style: normal;
+      -webkit-text-stroke: 2px #fff;
     }
 
     /* Divider pip */
-    .hero-pip {
-      width: 32px;
+    .divider-pip {
+      width: 30px;
       height: 3px;
+      background: #6a9bff;
       border-radius: 2px;
-      background: #6b9eff;
       margin-bottom: 28px;
     }
 
-    /* Featured hospital photo card */
-    .hero-card {
-      background: var(--white);
-      border-radius: 16px;
+    /* Hospital photo card */
+    .photo-card {
+      background: #fff;
+      border-radius: 14px;
       overflow: hidden;
-      margin-bottom: 28px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      margin-bottom: 26px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
     }
-    .hero-card img {
+    .photo-card img {
       width: 100%;
-      height: auto;
-      object-fit: cover;
       display: block;
     }
-    .hero-card-caption {
-      background: var(--white);
-      color: #555;
+    .photo-caption {
+      color: #6b7280;
       font-size: 12px;
       font-weight: 500;
-      padding: 10px 14px;
       text-align: center;
-      letter-spacing: 0.3px;
+      padding: 9px 12px 10px;
+      background: #fff;
+      letter-spacing: 0.2px;
     }
 
-    /* Event label + title + desc */
-    .hero-tag {
-      font-size: 10.5px;
+    /* Event label */
+    .event-tag {
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #8bb4ff;
-      margin-bottom: 7px;
+      color: #7eb3ff;
+      margin-bottom: 6px;
     }
-    .hero-title {
-      font-size: 21px;
+    .event-title {
+      font-size: 22px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: -0.3px;
+      color: #fff;
       margin-bottom: 14px;
-      color: var(--white);
+      letter-spacing: -0.3px;
     }
-    .hero-desc {
-      font-size: 13.5px;
+    .event-desc {
+      font-size: 13px;
       line-height: 1.7;
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 32px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 30px;
     }
-    .hero-desc p + p { margin-top: 12px; }
+    .event-desc p + p { margin-top: 10px; }
 
-    /* 3-icon footer strip */
-    .hero-icons {
+    /* Icons strip */
+    .icons-strip {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 0;
-      border-top: 1px solid rgba(255,255,255,0.18);
-      padding-top: 26px;
-      padding-bottom: 4px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 24px;
     }
-    .hero-icon {
+    .icon-col {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 9px;
-      font-size: 10.5px;
+      gap: 8px;
+      font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
-      color: var(--white);
+      color: #fff;
       text-align: center;
       line-height: 1.3;
     }
-    .icon-ring {
-      width: 46px;
-      height: 46px;
+    .icon-circle {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(255,255,255,0.2);
     }
-    .icon-ring svg {
+    .icon-circle svg {
       width: 20px;
       height: 20px;
-      stroke: var(--white);
+      stroke: #fff;
       fill: none;
       stroke-width: 1.8;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    /* ════════════════════════════
-       CONTENT — Light background
-    ════════════════════════════ */
+    /* ─── CONTENT (white) ─── */
     .content {
-      background: var(--pale);
-      padding: 44px 22px 0;
+      background: #fff;
+      padding: 40px 22px;
     }
+    .content-block { margin-bottom: 44px; }
+    .content-block:last-child { margin-bottom: 0; }
 
-    /* A single strategy / result block */
-    .block {
-      margin-bottom: 44px;
-    }
-
-    .block-tag {
-      display: block;
-      font-size: 10.5px;
+    .section-tag {
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--accent);
+      color: #3d6af5;
+      display: block;
       margin-bottom: 10px;
     }
-
-    .block-heading {
-      font-size: clamp(21px, 5.5vw, 34px);
+    .section-h2 {
+      font-size: 24px;
       font-weight: 900;
-      line-height: 1.12;
+      line-height: 1.15;
       text-transform: uppercase;
       letter-spacing: -0.5px;
-      color: var(--deep);
+      color: #02185b;
       margin-bottom: 12px;
     }
-
-    .block-body {
-      font-size: 13.5px;
+    .section-p {
+      font-size: 13px;
       line-height: 1.7;
       color: #4b5563;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    /* Photo carousel */
-    .carousel-frame {
-      width: 100%;
-      border-radius: 14px;
+    /* Carousel */
+    .carousel {
+      border-radius: 12px;
       overflow: hidden;
-      background: #c8d4ea;
-      aspect-ratio: 16 / 10;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #dde4f0;
       margin-bottom: 10px;
     }
-    .carousel-frame img {
+    .carousel img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
-    .carousel-dots {
+    .dots {
       display: flex;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       margin-bottom: 0;
     }
-    .c-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #c9d2e0;
-    }
-    .c-dot.active {
-      background: var(--accent);
-      width: 20px;
-      border-radius: 4px;
-    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #d1d5db; }
+    .dot.active { background: #3d6af5; }
 
-    /* ════════════════════════════
-       CTA CARD — inside content
-    ════════════════════════════ */
-    .cta-wrap {
-      background: var(--pale);
-      padding: 32px 22px 56px;
+    /* ─── CTA CARD ─── */
+    .cta-section {
+      background: #fff;
+      padding: 32px 22px 52px;
     }
     .cta-card {
-      background: var(--blue);
-      border-radius: 18px;
-      padding: 36px 22px 32px;
+      background: #0631b3;
+      border-radius: 16px;
+      padding: 36px 20px 30px;
       text-align: center;
-      color: var(--white);
+      color: #fff;
     }
-    .cta-rocket {
-      width: 50px;
-      height: 50px;
-      background: rgba(255,255,255,0.16);
+    .cta-icon-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.15);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 14px;
     }
-    .cta-rocket svg {
+    .cta-icon-box svg {
       width: 24px;
       height: 24px;
-      stroke: var(--white);
+      stroke: #fff;
       fill: none;
       stroke-width: 2;
       stroke-linecap: round;
@@ -304,207 +258,185 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: rgba(255,255,255,0.7);
+      margin-bottom: 22px;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       margin-bottom: 24px;
     }
-    .cta-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-bottom: 28px;
-    }
-    .cta-stat {
+    .stat {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
-      padding: 0 4px;
-      border-right: 1px solid rgba(255,255,255,0.18);
+      gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      padding: 0 6px;
     }
-    .cta-stat:last-child { border-right: none; }
-    .cta-stat-num {
-      font-size: 24px;
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-size: 26px;
       font-weight: 900;
       letter-spacing: -0.5px;
     }
-    .cta-stat-sub {
+    .stat-lbl {
       font-size: 8.5px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       color: rgba(255,255,255,0.55);
       text-align: center;
-      line-height: 1.3;
+      line-height: 1.4;
     }
     .cta-btn {
       display: block;
-      width: 100%;
-      padding: 17px 20px;
-      background: var(--white);
-      color: var(--deep);
+      background: #fff;
+      color: #02185b;
       font-family: 'Inter', sans-serif;
-      font-size: 12.5px;
       font-weight: 800;
-      letter-spacing: 1.2px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      border-radius: 7px;
+      padding: 16px 20px;
+      border-radius: 6px;
       text-align: center;
-      transition: background 0.2s, transform 0.15s;
     }
-    .cta-btn:hover {
-      background: #e6eeff;
-      transform: translateY(-1px);
-    }
-
-    /* ── desktop clamp ── */
-    @media (min-width: 520px) {
-      .hero, .content, .cta-wrap {
-        max-width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
+    .cta-btn:hover { background: #eef2ff; }
   </style>
 </head>
 <body>
 
-  <!-- ══════════ NAVBAR ══════════ -->
-  <nav class="nav">
-    <a href="index.html" class="nav-brand">
-      <span class="star">✦</span>
-      <span>Agency7</span>
-    </a>
-    <div class="nav-burger">☰</div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <!-- Agency7 zigzag logo icon -->
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 17L9 7L15 14L19 9" stroke="#3d6af5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19 9L21 17" stroke="#3d6af5" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <span>Agency7</span>
+  </a>
+  <div class="nav-menu">&#9776;</div>
+</nav>
 
-  <!-- ══════════ HERO ══════════ -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    HOW WE<br>
+    HACKED FOOTFALL<br>
+    &amp; DROVE A<br>
+    <span class="outline">200% SALES</span>
+    SURGE.
+  </h1>
 
-    <h1 class="hero-h1">
-      HOW WE<br/>HACKED FOOTFALL<br/>&amp; DROVE A
-      <span class="outline">200% SALES</span>
-      SURGE.
-    </h1>
+  <div class="divider-pip"></div>
 
-    <div class="hero-pip"></div>
+  <div class="photo-card">
+    <img src="images/Hospital photo.jpg" alt="Lakshmi Eye Hospital — Rachana Optical exterior" />
+    <div class="photo-caption">Rachana optical</div>
+  </div>
 
-    <!-- Hospital exterior photo card -->
-    <div class="hero-card">
-      <img src="images/Hospital photo.jpg" alt="Lakshmi Eye Hospital — Rachana Optical exterior" />
-      <div class="hero-card-caption">Rachana optical</div>
-    </div>
+  <p class="event-tag">Hospital Event Activation</p>
+  <h2 class="event-title">Event Documentation</h2>
+  <div class="event-desc">
+    <p>Turning a routine hospital visit into a viral cultural event.</p>
+    <p>We engineered a purely offline event, designed to bridge the gap between physical reality and digital buzz.</p>
+  </div>
 
-    <p class="hero-tag">Hospital Event Activation</p>
-    <h2 class="hero-title">Event Documentation</h2>
-    <div class="hero-desc">
-      <p>Turning a routine hospital visit into a viral cultural event.</p>
-      <p>We engineered a purely offline event, designed to bridge the gap between physical reality and digital buzz.</p>
-    </div>
-
-    <!-- 3-icon row -->
-    <div class="hero-icons">
-      <div class="hero-icon">
-        <div class="icon-ring">
-          <svg viewBox="0 0 24 24">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-            <circle cx="12" cy="13" r="4"/>
-          </svg>
-        </div>
-        <span>Event<br/>Captured</span>
-      </div>
-      <div class="hero-icon">
-        <div class="icon-ring">
-          <svg viewBox="0 0 24 24">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <span>Viral<br/>Engagement</span>
-      </div>
-      <div class="hero-icon">
-        <div class="icon-ring">
-          <svg viewBox="0 0 24 24">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-            <polyline points="17 6 23 6 23 12"/>
-          </svg>
-        </div>
-        <span>Massive<br/>Impact</span>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════ CONTENT ══════════ -->
-  <section class="content">
-
-    <!-- Strategy -->
-    <div class="block">
-      <span class="block-tag">The Strategy</span>
-      <h2 class="block-heading">Bridging Reality.<br/>Sparking Action.</h2>
-      <p class="block-body">We deployed high-energy interactive games to lure in youngsters, paired with exclusive, high-value health offers to incentivize action.</p>
-      <div class="carousel-frame">
-        <img src="images/interior photo.jpg" alt="Hospital interior — strategy activation" />
-      </div>
-      <div class="carousel-dots">
-        <div class="c-dot active"></div>
-        <div class="c-dot"></div>
-        <div class="c-dot"></div>
-      </div>
-    </div>
-
-    <!-- Result -->
-    <div class="block">
-      <span class="block-tag">The Result</span>
-      <h2 class="block-heading">Local Impact.<br/>Massive Growth.</h2>
-      <p class="block-body">We captured this raw offline energy and amplified it across social media, instantly surging their brand presence and driving direct sales through the roof.</p>
-      <div class="carousel-frame">
-        <img src="images/people photo.jpg" alt="Event — crowd at Lakshmi Eye Hospital" />
-      </div>
-      <div class="carousel-dots">
-        <div class="c-dot active"></div>
-        <div class="c-dot"></div>
-        <div class="c-dot"></div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════ CTA CARD ══════════ -->
-  <div class="cta-wrap">
-    <div class="cta-card">
-
-      <div class="cta-rocket">
-        <!-- Rocket icon -->
+  <div class="icons-strip">
+    <div class="icon-col">
+      <div class="icon-circle">
         <svg viewBox="0 0 24 24">
-          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"/>
-          <path d="M12 17l-4.5-4.5"/>
-          <path d="M16 5c0 0-4 2-8 8"/>
-          <path d="M8 16c0 0 2-4 8-8"/>
-          <circle cx="16.5" cy="7.5" r="1.5"/>
-          <path d="M2 2l20 20" stroke-width="0"/>
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
         </svg>
       </div>
-
-      <p class="cta-label">Result Delivered</p>
-
-      <div class="cta-stats">
-        <div class="cta-stat">
-          <span class="cta-stat-num">200%</span>
-          <span class="cta-stat-sub">Sales<br/>Increase</span>
-        </div>
-        <div class="cta-stat">
-          <span class="cta-stat-num">3X</span>
-          <span class="cta-stat-sub">Footfall<br/>Growth</span>
-        </div>
-        <div class="cta-stat">
-          <span class="cta-stat-num">45K+</span>
-          <span class="cta-stat-sub">Event<br/>Reach</span>
-        </div>
+      <span>Event<br>Captured</span>
+    </div>
+    <div class="icon-col">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
       </div>
-
-      <a href="index.html#contact-section" class="cta-btn">Let's Build Your Story</a>
+      <span>Viral<br>Engagement</span>
+    </div>
+    <div class="icon-col">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24">
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+          <polyline points="17 6 23 6 23 12"/>
+        </svg>
+      </div>
+      <span>Massive<br>Impact</span>
     </div>
   </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+  <div class="content-block">
+    <span class="section-tag">The Strategy</span>
+    <h2 class="section-h2">Bridging Reality.<br>Sparking Action.</h2>
+    <p class="section-p">We deployed high-energy interactive games to lure in youngsters, paired with exclusive, high-value health offers to incentivize action.</p>
+    <div class="carousel">
+      <img src="images/interior photo.jpg" alt="Hospital interior" />
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <span class="section-tag">The Result</span>
+    <h2 class="section-h2">Local Impact.<br>Massive Growth.</h2>
+    <p class="section-p">We captured this raw offline energy and amplified it across social media, instantly surging their brand presence and driving direct sales through the roof.</p>
+    <div class="carousel">
+      <img src="images/people photo.jpg" alt="Event crowd" />
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CARD -->
+<div class="cta-section">
+  <div class="cta-card">
+    <div class="cta-icon-box">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"/>
+        <path d="M12 17l-4.5-4.5"/>
+        <path d="M16 5c-4 2-8 8-8 8"/>
+        <path d="M8 16c0 0 6-4 8-8"/>
+        <circle cx="16.5" cy="7.5" r="1"/>
+      </svg>
+    </div>
+    <p class="cta-label">Result Delivered</p>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">200%</span>
+        <span class="stat-lbl">Sales<br>Increase</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3X</span>
+        <span class="stat-lbl">Footfall<br>Growth</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">45K+</span>
+        <span class="stat-lbl">Event<br>Reach</span>
+      </div>
+    </div>
+    <a href="index.html#contact-section" class="cta-btn">Let's Build Your Story</a>
+  </div>
+</div>
 
 </body>
 </html>
