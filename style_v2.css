@@ -2907,13 +2907,13 @@ body {
     letter-spacing: 1px;
   }
 
-  /* Heading wrapper: extra top padding creates space for the face to show above text */
+  /* Heading wrapper: inline-block shrink-wraps the text so the % based image perfectly aligns to the text boundaries just like on PC */
   .unanswered-heading-wrapper {
-    display: block;
+    display: inline-block;
     text-align: left;
-    width: 100%;
-    padding-top: 100px;
-    box-sizing: border-box;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .unanswered-heading {
@@ -2923,11 +2923,11 @@ body {
     line-height: 0.85;
   }
 
-  /* Composite image: center aligns with UNANSWERED text — face above, phone below */
+  /* Composite image: perfectly mimics PC proportion to the text */
   .unanswered-overlay-img {
-    width: 80%;
+    width: 68%;
     left: 50%;
-    top: 78%;
+    top: 66%;
   }
 
   .unanswered-sub-row {
