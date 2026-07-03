@@ -4159,6 +4159,98 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   
   
   /* --- WEB EXPERIENCES SECTION --- */
+  .web-section { padding-top: 40px !important; }
+  .web-header {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    position: relative !important;
+    margin-bottom: 25px !important;
+  }
+  .web-title-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 65% !important;
+  }
+  .web-title {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0px !important;
+  }
+  .web-title .web-bold {
+    font-size: clamp(40px, 15vw, 65px) !important;
+    line-height: 1 !important;
+  }
+  .web-title .web-italic {
+    font-size: clamp(30px, 12vw, 50px) !important;
+    margin-top: -5px !important;
+    line-height: 1 !important;
+  }
+  
+  .btn-view-all {
+    position: absolute !important;
+    top: 5px !important;
+    right: 0px !important;
+    font-size: 9px !important;
+    padding: 12px 16px !important;
+    white-space: nowrap !important;
+    border-radius: 30px !important;
+  }
+
+  .web-mobile-subtext {
+    display: block !important;
+    margin-top: 20px !important;
+  }
+  .web-line-star {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+  }
+  .web-line-star hr.blue-line {
+    flex-grow: 1 !important;
+    border: none !important;
+    border-top: 1px solid #0631b3 !important;
+    margin: 0 !important;
+  }
+  .star-icon {
+    color: #0631b3 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+  }
+  .web-sub-p {
+    color: #0631b3 !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  /* Card Styles */
+  .web-card {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  
+  /* Make whole card clickable and hide overlay icon */
+  .web-overlay {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  .web-overlay .web-btn {
+    opacity: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: none !important;
+    border-radius: 0 !important;
+  }
+
   .web-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -4181,12 +4273,12 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   .web-col-left .web-card:nth-child(2) { /* Kite */
     grid-column: 2 / 3 !important;
     grid-row: 2 !important;
-    height: 180px !important;
+    height: 130px !important;
   }
   .web-col-right .web-card { /* Lakshmi */
     grid-column: 2 / 3 !important;
     grid-row: 3 !important;
-    height: 180px !important;
+    height: 130px !important;
   }
 
 
@@ -5823,4 +5915,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   .work-headline .italic-text {
     font-size: clamp(50px, 14vw, 70px) !important; /* MASSIVE FONT to cover white space */
   }
+}
+.web-mobile-subtext {
+  display: none;
 }
