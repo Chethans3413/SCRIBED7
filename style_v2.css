@@ -2551,18 +2551,27 @@ body {
 
 @media (max-width: 768px) {
   .testi-wrap {
-    padding: 80px 24px;
+    padding: 80px 20px;
+  }
+
+  .testi-container {
+    text-align: left;
+    align-items: flex-start;
+    gap: 60px;
   }
 
   .testi-media-col {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 380px;
+    margin: 0 auto;
   }
 
   .testi-blue-box {
-    width: 200px;
+    width: 63%;
     height: 280px;
     top: 40px;
+    left: 0;
     padding: 24px 16px;
   }
 
@@ -2571,11 +2580,11 @@ body {
   }
 
   .testi-stats-content {
-    width: 100px; /* Reduced width to prevent overlap on mobile */
+    width: 100%;
   }
 
   .testi-stats-number {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .testi-stats-label {
@@ -2583,9 +2592,10 @@ body {
   }
 
   .testi-video-card {
-    left: 120px;
-    width: 200px;
+    width: 61%;
     height: 340px;
+    left: auto;
+    right: 0;
   }
 
   .testi-video-overlay {
@@ -2614,20 +2624,34 @@ body {
     transform: translateX(1px);
   }
 
+  .testi-quote-col {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
   .testi-quote-text {
-    font-size: 28px;
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 24px;
   }
 
   .testi-quote-mark {
-    font-size: 150px;
-    top: -75px;
+    font-size: 120px;
+    top: -65px;
+    left: auto;
+    right: 0;
+    transform: none;
   }
 
   .testi-client-card {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
     gap: 16px;
   }
-
 }
 
 /* ============================================
