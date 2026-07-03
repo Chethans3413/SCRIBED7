@@ -6046,3 +6046,36 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   }
   .rmo-footer-arrow svg { width: 20px; height: 20px; stroke-width: 1.5; }
 }
+
+/* Viral Short-Form Horizontal Slider on Mobile */
+@media screen and (max-width: 768px) {
+  .vs-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100vw !important;
+    margin-left: -20px !important; /* To reach screen edges */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 20px !important;
+    gap: 15px !important;
+    grid-template-columns: none !important;
+  }
+  .vs-card {
+    flex: 0 0 82% !important;
+    scroll-snap-align: center;
+    max-width: 320px; /* safety limit */
+  }
+  /* Hide scrollbar for slider */
+  .vs-cards::-webkit-scrollbar {
+    display: none;
+  }
+  .vs-cards {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+  }
+}
