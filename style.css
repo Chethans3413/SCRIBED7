@@ -3928,7 +3928,6 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
 
   /* Grids to 2 Columns */
   .services-grid, 
-  .web-grid, 
   .vs-cards, 
   .grid-2, 
   .grid-3, 
@@ -3972,7 +3971,6 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
 @media screen and (max-width: 768px) {
   /* Grids to 1 Column */
   .services-grid, 
-  .web-grid, 
   .vs-cards, 
   .grid-2, 
   .grid-3, 
@@ -4172,7 +4170,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   .web-col-middle .web-card {
     grid-column: 1 / 3 !important;
     grid-row: 1 !important;
-    height: 250px !important;
+    height: 380px !important;
   }
   .web-col-left .web-card:nth-child(1) { /* Chandi */
     grid-column: 1 / 2 !important;
@@ -4183,12 +4181,12 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   .web-col-left .web-card:nth-child(2) { /* Kite */
     grid-column: 2 / 3 !important;
     grid-row: 2 !important;
-    height: 150px !important;
+    height: 180px !important;
   }
   .web-col-right .web-card { /* Lakshmi */
     grid-column: 2 / 3 !important;
     grid-row: 3 !important;
-    height: 150px !important;
+    height: 180px !important;
   }
 
 
