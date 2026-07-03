@@ -2681,7 +2681,6 @@ body {
   align-items: center;
   box-shadow: 0 20px 50px rgba(0, 44, 243, 0.04);
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* Absolute top right badge */
@@ -2908,12 +2907,13 @@ body {
     letter-spacing: 1px;
   }
 
-  /* Heading wrapper: block so text fills left edge */
+  /* Heading wrapper: extra top padding creates space for the face to show above text */
   .unanswered-heading-wrapper {
     display: block;
     text-align: left;
     width: 100%;
-    overflow: hidden;
+    padding-top: 100px;
+    box-sizing: border-box;
   }
 
   .unanswered-heading {
@@ -2923,11 +2923,11 @@ body {
     line-height: 0.85;
   }
 
-  /* Composite image: keep it overlaying the text, tightly contained */
+  /* Composite image: face shows in the padding area above text, phone overlaps below */
   .unanswered-overlay-img {
-    width: 72%;
-    left: 48%;
-    top: 68%;
+    width: 75%;
+    left: 50%;
+    top: 52%;
   }
 
   .unanswered-sub-row {
