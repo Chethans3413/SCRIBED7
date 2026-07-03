@@ -5989,16 +5989,16 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     display: block; position: relative; z-index: 1; width: 100%; height: 200px;
   }
   .rmo-oval {
-    width: 50px; height: 280px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.4);
+    width: 44px; height: 280px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.4);
     display: flex; flex-direction: column; align-items: center; justify-content: space-between;
     padding-top: 15px; padding-bottom: 25px; background: transparent; position: absolute; top: 50%; transform: translate(-50%, -50%);
     box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
   }
-  .rmo-oval:nth-child(1) { left: calc(50% - 155px); z-index: 1; }
-  .rmo-oval:nth-child(2) { left: calc(50% - 125px); z-index: 2; }
-  .rmo-oval:nth-child(3) { left: calc(50% - 95px); z-index: 3; }
-  .rmo-oval:nth-child(4) { left: calc(50% - 65px); z-index: 4; }
-  .rmo-oval:nth-child(5) { left: calc(50% + 100px); z-index: 1; }
+  .rmo-oval:nth-child(1) { left: calc(50% - 156px); z-index: 1; }
+  .rmo-oval:nth-child(2) { left: calc(50% - 122px); z-index: 2; }
+  .rmo-oval:nth-child(3) { left: calc(50% - 88px); z-index: 3; }
+  .rmo-oval:nth-child(4) { left: calc(50% - 54px); z-index: 4; }
+  .rmo-oval:nth-child(5) { left: calc(50% + 94px); z-index: 1; }
   .rmo-oval-icon {
     width: 24px; height: 24px; color: #fff; background: #002fd6; border-radius: 50%;
     display: flex; align-items: center; justify-content: center; padding: 5px;
