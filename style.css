@@ -5156,7 +5156,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   
   /* --- 1. OUR WORK SECTION --- */
   .work-section {
-    padding: 40px 20px !important;
+    padding: 20px 20px 40px 20px !important;
     background-color: #fbf8f1 !important; /* Cream background */
   }
   .blue-line {
@@ -5165,6 +5165,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     margin-bottom: 40px !important;
   }
   .work-content {
+    padding-top: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -5637,7 +5638,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
   
   /* --- WORK SECTION --- */
   .work-section {
-    padding: 40px 20px !important; /* 20px padding on left and right */
+    padding: 20px 20px 40px 20px !important; /* 20px padding on left and right */
   }
   .work-content {
     display: block !important; /* Kill flexbox that might shrink it */
