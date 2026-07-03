@@ -3898,6 +3898,100 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
    AGENCY7 RESPONSIVE PATCH
    ========================================================================== */
 
+
+/* ==========================================================================
+   DESKTOP FIX FOR REBUILT HTML STRUCTURE (CHANDI & WORK)
+   ========================================================================== */
+
+/* Fix Work Section alignment */
+.work-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  padding-top: 65px !important;
+  padding-left: 20px !important;
+}
+
+.work-section .work-desc {
+  text-align: left !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  color: #02185b !important;
+  max-width: 450px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Fix Circle Button */
+.circle-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #02185b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #02185b;
+  font-size: 20px;
+}
+
+.work-nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-dots {
+  display: flex;
+  gap: 10px;
+}
+.nav-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+.nav-dots .blue-dot { background: #002cf3; }
+
+/* Fix Chandi Grid Desktop Layout */
+.chandi-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  height: auto !important;
+}
+
+.chandi-top-full {
+  width: 100% !important;
+  height: 450px !important;
+}
+
+.chandi-bottom-split {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  height: 450px !important;
+  width: 100% !important;
+}
+
+.chandi-bottom-left {
+  flex: 1.5 !important;
+  height: 100% !important;
+}
+
+.chandi-bottom-right {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  height: 100% !important;
+}
+
+.sq-top, .sq-bottom {
+  flex: 1 !important;
+  height: calc(50% - 10px) !important;
+}
+
 /* TABLET & MOBILE (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
   /* Global Resets */
