@@ -5557,6 +5557,7 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     letter-spacing: 1px !important;
     bottom: 10px !important;
     left: 10px !important;
+    top: auto !important;
     z-index: 2 !important;
   }
 
