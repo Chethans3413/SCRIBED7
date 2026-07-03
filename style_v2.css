@@ -5,6 +5,8 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .navbar {
@@ -2917,7 +2919,7 @@ body {
   }
 
   .unanswered-heading {
-    font-size: clamp(60px, 18vw, 90px);
+    font-size: clamp(65px, 25vw, 110px);
     letter-spacing: -2px;
     text-align: center;
     line-height: 0.85;
@@ -2950,26 +2952,27 @@ body {
     margin: 4px 0;
   }
 
-  /* CTA column: full width, left aligned, compact */
+  /* CTA column: full width, centered, compact */
   .unanswered-cta-col {
     width: 100%;
     padding-left: 0;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     gap: 16px;
   }
 
   .unanswered-cta-heading {
-    font-size: 13px;
-    letter-spacing: 0.8px;
-    text-align: left;
-    line-height: 1.5;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.4;
   }
 
   .unanswered-cta-btn {
-    font-size: 9px;
-    padding: 11px 18px;
-    gap: 8px;
+    font-size: 11px;
+    padding: 14px 22px;
+    gap: 10px;
+    margin: 0 auto;
   }
 
   /* Badge: smaller on mobile */
