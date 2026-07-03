@@ -6221,4 +6221,12 @@ a, button, .cta-button, .explore-link, .tt-cta-btn,
     -ms-overflow-style: none; 
     scrollbar-width: none;  
   }
+  
+  /* Hide all pagination dots on mobile view */
+  .slider-dots,
+  .nav-dots,
+  .vs-sidebar-dots,
+  .l-dots {
+    display: none !important;
+  }
 }
