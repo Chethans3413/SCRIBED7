@@ -2894,15 +2894,15 @@ body {
     text-align: left;
   }
 
-  /* Art column: full width, left aligned */
+  /* Art column: full width, centered */
   .unanswered-art-col {
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
   }
 
   .unanswered-tag {
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 9px;
     letter-spacing: 1px;
   }
@@ -2910,16 +2910,16 @@ body {
   /* Heading wrapper: inline-block shrink-wraps the text so the % based image perfectly aligns to the text boundaries just like on PC */
   .unanswered-heading-wrapper {
     display: inline-block;
-    text-align: left;
+    text-align: center;
     width: auto;
     margin-top: 30px;
     margin-bottom: 20px;
   }
 
   .unanswered-heading {
-    font-size: clamp(46px, 13vw, 68px);
+    font-size: clamp(60px, 18vw, 90px);
     letter-spacing: -2px;
-    text-align: left;
+    text-align: center;
     line-height: 0.85;
   }
 
