@@ -2655,95 +2655,276 @@ body {
 }
 
 /* ============================================
-   SPLIT LAYOUT BASE STYLES (Used by Unanswered & Contact)
+   UNANSWERED CTA BANNER SECTION Styles
    ============================================ */
-  .split-section {
-    width: 100%;
-    position: relative;
+
+.unanswered-wrap {
+  background-color: #f2f5fb; /* Matches testimonial section background */
+  padding: 80px 80px 140px 80px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.unanswered-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.unanswered-card {
+  position: relative;
+  background-color: #ffffff; /* Pure white card */
+  border: 1px solid rgba(0, 44, 243, 0.22);
+  border-radius: 24px;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 20px 50px rgba(0, 44, 243, 0.04);
+  box-sizing: border-box;
+}
+
+/* Absolute top right badge */
+.unanswered-top-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #002cf3;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Left Column: Art and Headings */
+.unanswered-art-col {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.unanswered-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #002cf3;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.unanswered-star-icon {
+  flex-shrink: 0;
+}
+
+.unanswered-heading-wrapper {
+  position: relative;
+  display: inline-block; /* Shrink-wraps to letters so overlay centers perfectly */
+}
+
+.unanswered-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 146px; /* Sized for bold condensed look */
+  font-weight: 900;
+  line-height: 0.85;
+  color: #002cf3;
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.unanswered-overlay-img {
+  position: absolute;
+  left: 50%;
+  top: 66%; /* Centered vertically relative to the letters */
+  transform: translate(-50%, -50%);
+  width: 68%; /* Covers letters A through R perfectly */
+  height: auto;
+  mix-blend-mode: multiply; /* Blends white background out and merges texture */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.unanswered-sub-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.unanswered-sub-txt {
+  color: #002cf3;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+/* Vertical Divider */
+.unanswered-divider {
+  width: 1px;
+  height: 180px;
+  background-color: rgba(0, 44, 243, 0.15);
+  flex-shrink: 0;
+}
+
+/* Right Column: CTA Info and Button */
+.unanswered-cta-col {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+.unanswered-cta-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #002cf3;
+  line-height: 1.45;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.unanswered-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #002cf3;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 44, 243, 0.12);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  white-space: nowrap;
+}
+
+.unanswered-cta-btn:hover {
+  transform: translateY(-2px);
+  background-color: #031680;
+  box-shadow: 0 12px 28px rgba(0, 44, 243, 0.22);
+}
+
+.unanswered-arrow-icon {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVE Styles for Unanswered CTA Section
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .unanswered-wrap {
+    padding: 80px 40px;
   }
-  
-  .split-page-wrap {
-    display: flex;
-    flex-direction: row;
+
+  .unanswered-card {
+    flex-direction: column;
     align-items: stretch;
-    min-height: 100vh;
+    gap: 40px;
+    padding: 50px 40px;
+  }
+
+  .unanswered-art-col {
+    width: 100%;
+    align-items: center;
+  }
+
+  .unanswered-tag {
+    justify-content: center;
+  }
+
+  .unanswered-heading-wrapper {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .unanswered-heading {
+    font-size: 110px;
+    text-align: center;
+  }
+
+  .unanswered-overlay-img {
+    width: 68%;
+  }
+
+  .unanswered-sub-row {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .unanswered-divider {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+  }
+
+  .unanswered-cta-col {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .unanswered-wrap {
+    padding: 60px 24px;
+  }
+
+  .unanswered-card {
+    padding: 40px 20px;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .unanswered-art-col {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .unanswered-tag {
+    justify-content: flex-start;
+    font-size: 9px;
+  }
+
+  .unanswered-heading-wrapper {
+    text-align: left;
+    display: block;
     width: 100%;
   }
-  
-  .split-left-col {
-    width: 50%;
-    background-color: #002cf3;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
+
+  .unanswered-heading {
+    font-size: 58px;
+    letter-spacing: -1.5px;
+    text-align: left;
+  }
+
+  .unanswered-overlay-img {
+    width: 80%;
+    left: 45%;
+    top: 66%;
+  }
+
+  .unanswered-sub-row {
+    flex-direction: row;
     justify-content: space-between;
-    padding: 60px 80px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .split-right-col {
-    width: 50%;
-    background-color: #f2f5fb;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 60px 80px;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 10;
-  }
-  
-  /* ============================================
-     UNANSWERED CTA BANNER SECTION Styles
-     ============================================ */
-  
-  /* Left Column Specific */
-  .unanswered-left-col {
-    justify-content: flex-start;
-  }
-  
-  .unanswered-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    margin-bottom: 40vh;
-  }
-  
-  .unanswered-star-icon {
-    flex-shrink: 0;
-  }
-  
-  .unanswered-left-bottom {
-    margin-top: auto;
-  }
-  
-  .unanswered-tagline-italic {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-style: italic;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
-    color: #ffffff;
-  }
-  
-  .unanswered-left-divider {
-    border: none;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 0 20px 0;
-    width: 40px;
-  }
-  
-  .unanswered-contact-row {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    width: 100%;
   }
   
   .unanswered-sub-txt {
@@ -2769,287 +2950,21 @@ body {
     margin: 5px 0;
   }
   
-  .unanswered-right-bottom {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-  
   .unanswered-cta-col {
     align-items: flex-start;
     text-align: left;
   }
   
   .unanswered-cta-heading {
-    font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 700;
-    color: #002cf3;
-    line-height: 1.45;
-    letter-spacing: 1.2px;
-    margin: 0;
+    text-align: left;
   }
   
   .unanswered-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background-color: #002cf3;
-    color: #ffffff;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-family: 'Inter', sans-serif;
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0, 44, 243, 0.12);
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  
-  .unanswered-right-divider {
-    border: none;
-    height: 1px;
-    background-color: rgba(0, 44, 243, 0.1);
-    margin: 10px 0;
-    width: 100%;
-  }
-  
-  .unanswered-client-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .unanswered-client-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    color: #002cf3;
-    font-family: 'Inter', sans-serif;
-    font-size: 6px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1;
-  }
-  
-  .unanswered-client-icon {
-    margin-bottom: 4px;
-  }
-  
-  .unanswered-client-name {
-    margin: 0 0 2px 0;
-    font-size: 12px;
-    color: #002cf3;
-    font-weight: 700;
-  }
-  
-  .unanswered-client-company {
-    font-size: 11px;
-    color: #002cf3;
-    font-weight: 600;
-  }
-  
-  .unanswered-client-role {
-    font-size: 11px;
-    color: #888;
-    margin-top: 2px;
-  }
-  
-  /* Center Overlay Layer */
-  .unanswered-center-layer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-  }
-  
-  .unanswered-heading {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18vw; 
-    font-weight: 900;
-    line-height: 0.85;
-    letter-spacing: -2.5px;
-    text-transform: uppercase;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .unanswered-heading-left {
-    color: #ffffff;
-  }
-  
-  .unanswered-heading-right {
-    color: #f2f5fb;
-    text-shadow: -4px 0 20px rgba(0, 0, 0, 0.05); /* Faint shadow to make it visible on white */
-  }
-  
-  .unanswered-video-card {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    background: #040a18;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 44, 243, 0.15);
-    pointer-events: auto;
-  }
-  
-  .unanswered-video-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) contrast(1.2);
-    opacity: 0.85;
-  }
-  
-  .unanswered-video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .unanswered-video-badge {
-    align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    background-color: #ffffff;
-    color: #002cf3;
-    padding: 6px 12px;
-    border-radius: 20px;
     font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    padding: 12px 20px;
   }
-  
-  .unanswered-video-sparkle {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    color: #fff;
-  }
-  
-  .unanswered-video-play {
-    align-self: center;
-    margin-top: auto;
-    margin-bottom: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .unanswered-video-play:hover {
-    background: rgba(255,255,255,0.1);
-    transform: scale(1.05);
-  }
-  
-  /* ============================================
-     RESPONSIVE Styles for Unanswered CTA Section
-     ============================================ */
-  
-  @media (max-width: 1024px) {
-    .split-left-col, .split-right-col {
-      padding: 60px 40px;
-    }
-    
-    .unanswered-heading {
-      font-size: 160px;
-    }
-    
-    .unanswered-video-card {
-      width: 260px;
-      height: 260px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .split-page-wrap {
-      flex-direction: column;
-    }
-    
-    .split-left-col, .split-right-col {
-      width: 100%;
-      min-height: auto;
-      padding: 60px 24px;
-    }
-    
-    .unanswered-heading {
-      position: absolute;
-      font-size: 110px;
-      top: 15%; /* Positioned overlapping the top part of the blue section */
-    }
-    
-    .unanswered-heading-left, .unanswered-heading-right {
-      /* In mobile stacked view, both parts sit on the blue background */
-      color: #ffffff;
-      text-shadow: none;
-    }
-    
-    .unanswered-center-layer {
-      position: relative;
-      transform: none;
-      top: 0;
-      left: 0;
-      padding: 0 24px;
-      margin-top: -80px; /* Pull it up to overlap the blue section slightly */
-      margin-bottom: -40px; /* Pull the next white section up slightly */
-      z-index: 30;
-      pointer-events: none;
-    }
-    
-    .unanswered-video-card {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      margin: 0 auto;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      pointer-events: auto;
-    }
-    
-    .unanswered-tag {
-      margin-bottom: 200px; /* Push the text down to make room for the massive heading */
-    }
-    
-    .unanswered-contact-info {
-      flex-direction: column;
-      gap: 12px;
-    }
-  }
+}
 
 /* ============================================
    UNANSWERED PAGE SPECIFIC Styles & Light Nav
@@ -3136,6 +3051,37 @@ html {
 .contact-page-wrap {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Left Column: Branding and Editorial Header */
+.contact-left-col {
+  width: 42%;
+  background-color: #002cf3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 10px 0 30px rgba(0, 44, 243, 0.12);
+  z-index: 10;
+}
+
+/* Right Column: Abstract BG and Form Card */
+.contact-right-col {
+  width: 58%;
+  background-color: #f2f5fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  position: relative;
   overflow: hidden;
 }
 
@@ -3709,6 +3655,13 @@ html {
    ============================================ */
 
 @media (max-width: 1200px) {
+  .contact-left-col {
+    padding: 60px 50px;
+  }
+
+  .contact-right-col {
+    padding: 60px 50px;
+  }
 
   .contact-title {
     font-size: 96px;
@@ -3720,6 +3673,25 @@ html {
 }
 
 @media (max-width: 1024px) {
+  .contact-page-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left-col {
+    width: 100%;
+    min-height: auto;
+    padding: 80px 40px 60px 40px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 44, 243, 0.12);
+  }
+
+  .contact-right-col {
+    width: 100%;
+    min-height: auto;
+    padding: 60px 40px 80px 40px;
+  }
 
   .contact-content-center {
     margin: 40px 0;
@@ -3748,6 +3720,13 @@ html {
 }
 
 @media (max-width: 768px) {
+  .contact-left-col {
+    padding: 60px 24px 40px 24px;
+  }
+
+  .contact-right-col {
+    padding: 40px 24px 60px 24px;
+  }
 
   .contact-title {
     font-size: 68px;
