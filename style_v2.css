@@ -2681,6 +2681,7 @@ body {
   align-items: center;
   box-shadow: 0 20px 50px rgba(0, 44, 243, 0.04);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Absolute top right badge */
@@ -2883,87 +2884,105 @@ body {
 
 @media (max-width: 768px) {
   .unanswered-wrap {
-    padding: 60px 24px;
+    padding: 40px 16px;
   }
 
   .unanswered-card {
-    padding: 40px 20px;
-    gap: 30px;
+    flex-direction: column;
     align-items: stretch;
+    padding: 28px 20px 32px 20px;
+    gap: 20px;
     text-align: left;
   }
 
+  /* Art column: full width, left aligned */
   .unanswered-art-col {
+    width: 100%;
     align-items: flex-start;
-    gap: 20px;
+    gap: 12px;
   }
 
   .unanswered-tag {
     justify-content: flex-start;
     font-size: 9px;
+    letter-spacing: 1px;
   }
 
+  /* Heading wrapper: block so text fills left edge */
   .unanswered-heading-wrapper {
     display: block;
     text-align: left;
     width: 100%;
+    overflow: hidden;
   }
 
   .unanswered-heading {
-    font-size: clamp(40px, 14vw, 72px);
-    letter-spacing: -1.5px;
+    font-size: clamp(46px, 13vw, 68px);
+    letter-spacing: -2px;
     text-align: left;
+    line-height: 0.85;
   }
 
+  /* Composite image: keep it overlaying the text, tightly contained */
   .unanswered-overlay-img {
-    width: 85%;
-    left: 45%;
-    top: 66%;
+    width: 72%;
+    left: 48%;
+    top: 68%;
   }
 
   .unanswered-sub-row {
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
-  }
-  
-  .unanswered-sub-txt {
-    font-size: 7px;
-    letter-spacing: 0.5px;
+    margin-top: 4px;
   }
 
-  .unanswered-top-badge {
-    top: 16px;
-    right: 16px;
-    width: 28px;
-    height: 28px;
+  .unanswered-sub-txt {
+    font-size: 7px;
+    letter-spacing: 0.4px;
   }
-  
-  .unanswered-top-badge svg {
-    width: 12px;
-    height: 12px;
-  }
-  
+
+  /* Divider becomes a thin horizontal line */
   .unanswered-divider {
     width: 100%;
     height: 1px;
-    margin: 5px 0;
+    margin: 4px 0;
   }
-  
+
+  /* CTA column: full width, left aligned, compact */
   .unanswered-cta-col {
+    width: 100%;
+    padding-left: 0;
     align-items: flex-start;
     text-align: left;
+    gap: 16px;
   }
-  
+
   .unanswered-cta-heading {
-    font-size: 16px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
     text-align: left;
+    line-height: 1.5;
   }
-  
+
   .unanswered-cta-btn {
     font-size: 9px;
-    padding: 12px 20px;
+    padding: 11px 18px;
+    gap: 8px;
+  }
+
+  /* Badge: smaller on mobile */
+  .unanswered-top-badge {
+    top: 14px;
+    right: 14px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .unanswered-top-badge svg {
+    width: 11px;
+    height: 11px;
   }
 }
 
