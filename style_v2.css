@@ -2909,15 +2909,13 @@ body {
     letter-spacing: 1px;
   }
 
-  /* Heading wrapper: full width so the composite image scales to fill the card */
+  /* Heading wrapper: inline-block shrink-wraps the text so the % based image perfectly aligns to the text boundaries just like on PC */
   .unanswered-heading-wrapper {
-    display: block;
+    display: inline-block;
     text-align: center;
-    width: 100%;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    min-height: 160px;
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 
   .unanswered-heading {
@@ -2925,17 +2923,13 @@ body {
     letter-spacing: -2px;
     text-align: center;
     line-height: 0.85;
-    position: relative;
-    z-index: 0;
   }
 
-  /* Composite image: much larger now that wrapper is full-width */
+  /* Composite image: perfectly mimics PC proportion to the text */
   .unanswered-overlay-img {
-    width: 55%;
+    width: 68%;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    top: 66%;
   }
 
   .unanswered-sub-row {
