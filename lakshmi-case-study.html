@@ -4,73 +4,428 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agency7 — How We Hacked Footfall & Drove a 200% Sales Surge</title>
-  <meta name="description" content="Discover how Agency7 turned a hospital event into a viral cultural moment, driving 200% sales growth for Lakshmi Eye Hospital." />
+  <meta name="description" content="How Agency7 turned a hospital event into a viral cultural moment, driving 200% sales growth for Lakshmi Eye Hospital." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=42" />
-  <link rel="stylesheet" href="case-study.css?v=3" />
-</head>
-<body class="case-study">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* =============================================
+       FULL RESET — standalone from style.css
+       ============================================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar">
-    <div class="nav-logo">
-      <span class="logo-star">✦</span>
-      <span class="logo-text">Agency7</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html#work-section">WORK</a></li>
-      <li><a href="index.html#services-section">SERVICES</a></li>
-      <li><a href="index.html#about-section">ABOUT US</a></li>
-      <li><a href="index.html#contact-section">CONTACT</a></li>
-    </ul>
-    <a href="index.html#contact-section" class="cta-button">LET'S TALK ↗</a>
-    <div class="hamburger">☰</div>
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #eef2fb;
+      color: #111;
+      overflow-x: hidden;
+      min-height: 100vh;
+      height: auto !important;
+    }
+
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ---- COLOURS ---- */
+    :root {
+      --blue: #0631b3;
+      --deep: #02185b;
+      --accent: #4077f4;
+      --bg: #eef2fb;
+      --white: #ffffff;
+    }
+
+    /* ===========================================
+       NAVBAR
+       =========================================== */
+    .cs-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    }
+
+    .cs-nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--deep);
+      letter-spacing: 0.5px;
+    }
+
+    .cs-nav-logo .star {
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .cs-nav-hamburger {
+      font-size: 22px;
+      color: var(--deep);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ===========================================
+       HERO — Dark Blue
+       =========================================== */
+    .cs-hero {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 96px 24px 48px;
+    }
+
+    .cs-hero-headline {
+      font-size: clamp(34px, 9vw, 72px);
+      font-weight: 900;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+
+    .cs-hero-headline .outline {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--white);
+    }
+
+    .cs-hero-divider {
+      width: 36px;
+      height: 3px;
+      background: #6b9eff;
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+
+    .cs-featured-img {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      background: #1a3a8a;
+    }
+
+    .cs-featured-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cs-event-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #90b8ff;
+      margin-bottom: 8px;
+    }
+
+    .cs-event-title {
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .cs-event-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 36px;
+    }
+
+    /* Icon grid */
+    .cs-icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 28px;
+      padding-bottom: 8px;
+      gap: 0;
+    }
+
+    .cs-icon-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.35;
+      padding: 0 6px;
+    }
+
+    .cs-icon-bubble {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cs-icon-bubble svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===========================================
+       CONTENT AREA — White
+       =========================================== */
+    .cs-content {
+      background: var(--white);
+      padding: 48px 24px;
+    }
+
+    .cs-block {
+      margin-bottom: 52px;
+    }
+
+    .cs-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .cs-section-tag {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .cs-section-heading {
+      font-size: clamp(22px, 5.5vw, 36px);
+      font-weight: 900;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      color: var(--deep);
+      margin-bottom: 14px;
+    }
+
+    .cs-section-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+
+    /* Carousel */
+    .cs-slide {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #d1d9e8;
+      aspect-ratio: 16/10;
+      margin-bottom: 12px;
+    }
+
+    .cs-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cs-dots {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .cs-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d1d5db;
+    }
+
+    .cs-dot.on {
+      background: var(--accent);
+    }
+
+    /* ===========================================
+       CTA CARD
+       =========================================== */
+    .cs-cta-wrap {
+      background: var(--white);
+      padding: 0 24px 56px;
+    }
+
+    .cs-cta-card {
+      background: var(--blue);
+      border-radius: 16px;
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cs-rocket-box {
+      width: 52px;
+      height: 52px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+
+    .cs-rocket-box svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cs-result-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 28px;
+    }
+
+    .cs-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 32px;
+    }
+
+    .cs-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+      padding: 0 6px;
+    }
+
+    .cs-stat:last-child {
+      border-right: none;
+    }
+
+    .cs-stat-num {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .cs-stat-lbl {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+    }
+
+    .cs-story-btn {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      background: var(--white);
+      color: var(--deep);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .cs-story-btn:hover {
+      background: #e8efff;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="cs-nav">
+    <a href="index.html" class="cs-nav-logo">
+      <span class="star">✦</span>
+      <span>Agency7</span>
+    </a>
+    <div class="cs-nav-hamburger">☰</div>
   </nav>
 
-  <!-- ===== HERO: Dark Blue ===== -->
+  <!-- HERO -->
   <section class="cs-hero">
     <h1 class="cs-hero-headline">
       HOW WE HACKED FOOTFALL &amp; DROVE A
-      <span class="outline-text">200% SALES</span>
+      <span class="outline">200% SALES</span>
       SURGE.
     </h1>
 
     <div class="cs-hero-divider"></div>
 
-    <!-- Featured hospital exterior image -->
-    <div class="cs-featured-image">
-      <img src="images/Hospital photo.jpg" alt="Lakshmi Eye Hospital — exterior with Rachana optical branding" />
+    <div class="cs-featured-img">
+      <img src="images/Hospital photo.jpg" alt="Lakshmi Eye Hospital exterior" />
     </div>
 
-    <!-- Event label -->
-    <p class="cs-event-label">Hospital Event Activation</p>
+    <p class="cs-event-tag">Hospital Event Activation</p>
     <h2 class="cs-event-title">Event Documentation</h2>
     <p class="cs-event-desc">
       Turning a routine hospital visit into a viral cultural event.<br/><br/>
       We engineered a purely offline event, designed to bridge the gap between physical reality and digital buzz.
     </p>
 
-    <!-- 3-icon grid -->
-    <div class="cs-icon-grid">
-      <div class="cs-icon-item">
-        <div class="cs-icon-circle">
-          <!-- Camera icon -->
+    <div class="cs-icons">
+      <div class="cs-icon-col">
+        <div class="cs-icon-bubble">
           <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         </div>
         <span>Event<br/>Captured</span>
       </div>
-      <div class="cs-icon-item">
-        <div class="cs-icon-circle">
-          <!-- Users icon -->
+      <div class="cs-icon-col">
+        <div class="cs-icon-bubble">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <span>Viral<br/>Engagement</span>
       </div>
-      <div class="cs-icon-item">
-        <div class="cs-icon-circle">
-          <!-- Trending up icon -->
+      <div class="cs-icon-col">
+        <div class="cs-icon-bubble">
           <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
         <span>Massive<br/>Impact</span>
@@ -78,78 +433,63 @@
     </div>
   </section>
 
-  <!-- ===== CONTENT: White panels ===== -->
-  <section class="cs-content-section">
+  <!-- CONTENT -->
+  <section class="cs-content">
 
-    <!-- Strategy Block -->
     <div class="cs-block">
-      <span class="cs-content-label">The Strategy</span>
-      <h2 class="cs-content-headline">Bridging Reality.<br/>Sparking Action.</h2>
-      <p class="cs-content-desc">
-        We deployed high-energy interactive games to lure in youngsters, paired with exclusive, high-value health offers to incentivize action.
-      </p>
-      <div class="cs-carousel-wrap">
-        <div class="cs-carousel">
-          <img src="images/interior photo.jpg" alt="Lakshmi Eye Hospital — interior strategy activation" />
-        </div>
-        <div class="cs-dots">
-          <div class="cs-dot active"></div>
-          <div class="cs-dot"></div>
-          <div class="cs-dot"></div>
-        </div>
+      <span class="cs-section-tag">The Strategy</span>
+      <h2 class="cs-section-heading">Bridging Reality.<br/>Sparking Action.</h2>
+      <p class="cs-section-body">We deployed high-energy interactive games to lure in youngsters, paired with exclusive, high-value health offers to incentivize action.</p>
+      <div class="cs-slide">
+        <img src="images/interior photo.jpg" alt="Strategy — hospital interior activation" />
+      </div>
+      <div class="cs-dots">
+        <div class="cs-dot on"></div>
+        <div class="cs-dot"></div>
+        <div class="cs-dot"></div>
       </div>
     </div>
 
-    <!-- Result Block -->
     <div class="cs-block">
-      <span class="cs-content-label">The Result</span>
-      <h2 class="cs-content-headline">Local Impact.<br/>Massive Growth.</h2>
-      <p class="cs-content-desc">
-        We captured this raw offline energy and amplified it across social media, instantly surging their brand presence and driving direct sales through the roof.
-      </p>
-      <div class="cs-carousel-wrap">
-        <div class="cs-carousel">
-          <img src="images/people photo.jpg" alt="Lakshmi Eye Hospital — crowd at event" />
-        </div>
-        <div class="cs-dots">
-          <div class="cs-dot active"></div>
-          <div class="cs-dot"></div>
-          <div class="cs-dot"></div>
-        </div>
+      <span class="cs-section-tag">The Result</span>
+      <h2 class="cs-section-heading">Local Impact.<br/>Massive Growth.</h2>
+      <p class="cs-section-body">We captured this raw offline energy and amplified it across social media, instantly surging their brand presence and driving direct sales through the roof.</p>
+      <div class="cs-slide">
+        <img src="images/people photo.jpg" alt="Result — crowd at hospital event" />
+      </div>
+      <div class="cs-dots">
+        <div class="cs-dot on"></div>
+        <div class="cs-dot"></div>
+        <div class="cs-dot"></div>
       </div>
     </div>
 
   </section>
 
-  <!-- ===== CTA CARD ===== -->
-  <div class="cs-cta-outer">
+  <!-- CTA CARD -->
+  <div class="cs-cta-wrap">
     <div class="cs-cta-card">
-      <!-- Rocket icon -->
-      <div class="cs-rocket-wrap">
-        <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"/><path d="M4.5 16.5L8 13m-.5 7l-3.5-3.5"/><path d="M14 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M3 21l7-7"/><path d="M6 8L3.5 5.5A2 2 0 0 1 5 2h12a2 2 0 0 1 1.97 2.34l-1.5 8.5A2 2 0 0 1 15.5 14.5L12 18l-3-3"/></svg>
+      <div class="cs-rocket-box">
+        <svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2l.5-.5"/><path d="M12 17l-4.5-4.5"/><path d="M15 6.5c0 4-3 8-9 10"/><path d="M6.5 15c4-6 10-9 10-9"/><circle cx="16" cy="8" r="2"/></svg>
       </div>
-
-      <p class="cs-result-label">Result Delivered</p>
-
-      <div class="cs-stats-grid">
-        <div class="cs-stat-item">
-          <span class="cs-stat-val">200%</span>
-          <span class="cs-stat-sub">Sales Increase</span>
+      <p class="cs-result-tag">Result Delivered</p>
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <span class="cs-stat-num">200%</span>
+          <span class="cs-stat-lbl">Sales Increase</span>
         </div>
-        <div class="cs-stat-item">
-          <span class="cs-stat-val">3X</span>
-          <span class="cs-stat-sub">Footfall Growth</span>
+        <div class="cs-stat">
+          <span class="cs-stat-num">3X</span>
+          <span class="cs-stat-lbl">Footfall Growth</span>
         </div>
-        <div class="cs-stat-item">
-          <span class="cs-stat-val">45K+</span>
-          <span class="cs-stat-sub">Event Reach</span>
+        <div class="cs-stat">
+          <span class="cs-stat-num">45K+</span>
+          <span class="cs-stat-lbl">Event Reach</span>
         </div>
       </div>
-
-      <a href="index.html#contact-section" class="cs-cta-btn">Let's Build Your Story</a>
+      <a href="index.html#contact-section" class="cs-story-btn">Let's Build Your Story</a>
     </div>
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
