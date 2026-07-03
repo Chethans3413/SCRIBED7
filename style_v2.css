@@ -2923,11 +2923,11 @@ body {
     line-height: 0.85;
   }
 
-  /* Composite image: face shows in the padding area above text, phone overlaps below */
+  /* Composite image: center aligns with UNANSWERED text — face above, phone below */
   .unanswered-overlay-img {
-    width: 75%;
+    width: 80%;
     left: 50%;
-    top: 52%;
+    top: 78%;
   }
 
   .unanswered-sub-row {
