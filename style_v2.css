@@ -28,7 +28,28 @@ body {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
+  text-decoration: none;
 }
+
+.logo-img {
+  height: 35px;
+  width: auto;
+  display: block;
+  transition: height 0.3s ease;
+}
+
+/* On dark backgrounds (like standard dark-blue navbar/contact section), make logo white */
+.navbar:not(.light-nav) .logo-img,
+.contact-logo .logo-img {
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+  }
+}
+
 
 .nav-links {
   display: flex;

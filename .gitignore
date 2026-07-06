@@ -5,3 +5,5 @@ Thumbs.db
 desktop.ini
 *.bz2
 *.dll
+node_modules/
+
