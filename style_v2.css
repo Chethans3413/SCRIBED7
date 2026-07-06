@@ -38,10 +38,9 @@ body {
   transition: height 0.3s ease;
 }
 
-/* On dark backgrounds (like standard dark-blue navbar/contact section), make logo white */
-.navbar:not(.light-nav) .logo-img,
-.contact-logo .logo-img {
-  filter: brightness(0) invert(1);
+/* On light backgrounds (like unanswered page light navigation), make logo dark blue (#0631b3) */
+.light-nav .logo-img {
+  filter: brightness(0) invert(16%) sepia(86%) saturate(2853%) hue-rotate(224deg) brightness(97%) contrast(106%);
 }
 
 @media screen and (max-width: 768px) {
