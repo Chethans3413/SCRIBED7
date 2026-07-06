@@ -1,4 +1,4 @@
-# AGENCY7 - Premium Digital Agency Website
+# Scribed7 - Premium Digital Agency Website
 
 A premium, highly interactive digital agency website built with HTML5, CSS3, and Vanilla JavaScript. 
 

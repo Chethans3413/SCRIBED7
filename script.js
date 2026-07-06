@@ -1,5 +1,5 @@
 // ============================================
-// AGENCY7 – JavaScript Interactions
+// Scribed7 – JavaScript Interactions
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
