@@ -2,27 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.scribed7.com/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.scribed7.com/about.html</loc>
-    <lastmod>2026-07-06</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.scribed7.com/contact.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.scribed7.com/lakshmi-case-study.html</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.scribed7.com/unanswered.html</loc>
-    <lastmod>2026-07-06</lastmod>
-    <priority>0.5</priority>
   </url>
 </urlset>

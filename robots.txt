@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /unanswered.html
+Disallow: /about.html
 
 Sitemap: https://www.scribed7.com/sitemap.xml

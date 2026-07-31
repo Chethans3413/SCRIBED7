@@ -87,6 +87,102 @@
         transform: none !important;
       }
     }
+
+    /* ============================================================
+       HERO SECTION — MOBILE RESPONSIVE (≤ 768px)
+       The desktop layout uses absolute-positioned cards spread
+       across a 1440px canvas. On mobile we collapse to a single
+       column stacked layout so images are actually visible.
+    ============================================================ */
+    @media screen and (max-width: 768px) {
+      .hero {
+        height: auto !important;
+        min-height: unset !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 20px 20px 60px !important;
+        overflow: hidden !important;
+      }
+
+      /* ---- Reset absolute cards to static flow ---- */
+      .card {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        height: 200px !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        margin: 10px auto !important;
+        display: block !important;
+      }
+
+      .card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+
+      /* Fine-tune individual cards */
+      .bust-card  { order: 2 !important; height: 180px !important; }
+      .zoe-card   { order: 4 !important; height: 200px !important; }
+      .leon-card  { order: 3 !important; height: 200px !important; }
+      .starry-card{ order: 5 !important; height: 170px !important; }
+      .news-card  { order: 6 !important; height: 220px !important; }
+
+      /* ---- Center-content goes on top ---- */
+      .center-content {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        text-align: center !important;
+        order: 1 !important;
+        width: 100% !important;
+        margin: 10px 0 20px !important;
+      }
+
+      .headline {
+        font-size: 60px !important;
+        line-height: 0.95 !important;
+      }
+
+      .divider {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .sub-text {
+        font-size: 10px !important;
+      }
+
+      /* ---- desc-text ---- */
+      .desc-text {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        order: 7 !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+        font-size: 13px !important;
+      }
+
+      /* ---- name labels ---- */
+      .name-label {
+        font-size: 16px !important;
+      }
+
+      /* ---- Navbar on mobile ---- */
+      .nav-links { display: none !important; }
+      .hamburger { display: block !important; }
+    }
   </style>
 </head>
 <body>
